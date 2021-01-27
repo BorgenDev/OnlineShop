@@ -19,6 +19,7 @@
 		AE9D569125C1B0D700E006E2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AE9D569025C1B0D700E006E2 /* GoogleService-Info.plist */; };
 		AE9D569A25C1B18400E006E2 /* FirebaseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9D569925C1B18400E006E2 /* FirebaseHandler.swift */; };
 		AE9D56A325C1B1CA00E006E2 /* Codable+Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9D56A225C1B1CA00E006E2 /* Codable+Dictionary.swift */; };
+		AE9D56A925C1B26100E006E2 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9D56A825C1B26100E006E2 /* Product.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		AE9D569025C1B0D700E006E2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AE9D569925C1B18400E006E2 /* FirebaseHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseHandler.swift; sourceTree = "<group>"; };
 		AE9D56A225C1B1CA00E006E2 /* Codable+Dictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Codable+Dictionary.swift"; sourceTree = "<group>"; };
+		AE9D56A825C1B26100E006E2 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		C1A1C4106DC6CA575EF286C8 /* Pods-OnlineShop-OnlineShopUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnlineShop-OnlineShopUITests.release.xcconfig"; path = "Target Support Files/Pods-OnlineShop-OnlineShopUITests/Pods-OnlineShop-OnlineShopUITests.release.xcconfig"; sourceTree = "<group>"; };
 		DADA49929A38755D053743DB /* Pods-OnlineShopTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnlineShopTests.debug.xcconfig"; path = "Target Support Files/Pods-OnlineShopTests/Pods-OnlineShopTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E99EB8F55C70F1674827436C /* Pods-OnlineShop-OnlineShopUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnlineShop-OnlineShopUITests.debug.xcconfig"; path = "Target Support Files/Pods-OnlineShop-OnlineShopUITests/Pods-OnlineShop-OnlineShopUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 		AE9D563E25C1AED400E006E2 /* OnlineShop */ = {
 			isa = PBXGroup;
 			children = (
+				AE9D56A725C1B24800E006E2 /* Model */,
 				AE9D56A125C1B19E00E006E2 /* Extensions */,
 				AE9D569825C1B16B00E006E2 /* Objects */,
 				AE9D568925C1AFCE00E006E2 /* Support files */,
@@ -193,6 +196,14 @@
 				AE9D56A225C1B1CA00E006E2 /* Codable+Dictionary.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		AE9D56A725C1B24800E006E2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AE9D56A825C1B26100E006E2 /* Product.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -435,6 +446,7 @@
 			files = (
 				AE9D564025C1AED400E006E2 /* AppDelegate.swift in Sources */,
 				AE9D569A25C1B18400E006E2 /* FirebaseHandler.swift in Sources */,
+				AE9D56A925C1B26100E006E2 /* Product.swift in Sources */,
 				AE9D56A325C1B1CA00E006E2 /* Codable+Dictionary.swift in Sources */,
 				AE9D564225C1AED400E006E2 /* SceneDelegate.swift in Sources */,
 			);
