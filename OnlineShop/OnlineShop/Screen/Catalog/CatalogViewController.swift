@@ -15,6 +15,17 @@ class CatalogViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.register(ProductCollectionViewCell.nib, forCellWithReuseIdentifier: ProductCollectionViewCell.nibName)
+        collectionView.contentInset.top = 16
+        
+        presenter?.viewLoaded()
+        presenter?.subscribe(collectionView: collectionView)
+        
+        title = "Каталог"
+        navigationController?.navigationBar.prefersLargeTitles = true
+    }
+    
+    func reloadView() {
+        collectionView.reloadData()
     }
 
 }
