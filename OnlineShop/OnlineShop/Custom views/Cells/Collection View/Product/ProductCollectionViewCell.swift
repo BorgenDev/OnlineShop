@@ -22,14 +22,20 @@ class ProductCollectionViewCell: UICollectionViewCell, NibLoadable {
         imageView.layer.cornerRadius = 10
         layer.cornerRadius = 10
 
-        ratingLabel.minimumScaleFactor = 0.2
+        ratingLabel.minimumScaleFactor = 0.4
         ratingLabel.adjustsFontSizeToFitWidth = true
+        
+        nameLabel.minimumScaleFactor = 0.4
+        nameLabel.adjustsFontSizeToFitWidth = true
+        
+        priceLabel.minimumScaleFactor = 0.2
+        priceLabel.adjustsFontSizeToFitWidth = true
     }
 
     func configure(by product: Product) {
         nameLabel.text = product.name
         priceLabel.text = "\(product.price ?? 0) ₽"
-        ratingLabel.text = "Рейтинг продукта: \(product.rating ?? 0)"
+        ratingLabel.text = "Рейтинг продукта: \(product.rating?.rounded() ?? 0)"
         imageView.kf.setImage(with: URL(string: product.imageUrl ?? ""))
     }
 
