@@ -33,11 +33,13 @@ PODS:
   - Realm (5.3.6):
     - Realm/Headers (= 5.3.6)
   - Realm/Headers (5.3.6)
+  - RealmSwift (5.3.6):
+    - Realm (= 5.3.6)
 
 DEPENDENCIES:
   - Firebase/Database
   - Kingfisher
-  - Realm
+  - RealmSwift
 
 SPEC REPOS:
   trunk:
@@ -52,6 +54,7 @@ SPEC REPOS:
     - nanopb
     - PromisesObjC
     - Realm
+    - RealmSwift
 
 SPEC CHECKSUMS:
   Firebase: 8db6f2d1b2c5e2984efba4949a145875a8f65fe5
@@ -65,7 +68,8 @@ SPEC CHECKSUMS:
   nanopb: 59317e09cf1f1a0af72f12af412d54edf52603fc
   PromisesObjC: b14b1c6b68e306650688599de8a45e49fae81151
   Realm: cd400dd7e5b5bb5c8ae9842eecd73792369e6ec0
+  RealmSwift: 99a16dbdee5d6dfb3d91d56088a9f8c15c0871d1
 
-PODFILE CHECKSUM: 57beef206d127998bc7cb5dd228ecaaec6b62c99
+PODFILE CHECKSUM: 6f7d833371702b553fce41d703a7bed176c8b2c6
 
 COCOAPODS: 1.10.0.rc.1

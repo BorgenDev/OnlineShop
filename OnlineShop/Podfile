@@ -9,7 +9,7 @@ target 'OnlineShop' do
 
   pod 'Firebase/Database'
   pod 'Kingfisher'
-  pod 'Realm'
+  pod 'RealmSwift'
 
   target 'OnlineShopTests' do
     inherit! :search_paths
