@@ -11,6 +11,7 @@ class ProductsServiceImplementation: ProductService {
     func fetchProducts(_ clouser: (([Product]) -> Void)?) {
         let cachedRealmProducts: [RealmProduct] = DatabaseManager.shared.fetch()
         let cachedProducts = cachedRealmProducts.map { Product(realmProduct: $0) }
+        clouser?(cachedProducts)
         
         FirebaseHandler().read { (response: [String: Product]?) in
             let products = (response ?? [:]).map { $0.value }
