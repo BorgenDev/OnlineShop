@@ -5,7 +5,8 @@
 //  Created by Arseniy on 27.01.2021.
 //
 
-import Foundation
+import UIKit
+
 class CatalogAssembly {
     func assembly() -> UIViewController {
         let vc = CatalogViewController()
