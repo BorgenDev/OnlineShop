@@ -29,6 +29,7 @@
 		AE9D56D625C1B89000E006E2 /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9D56D525C1B89000E006E2 /* NibLoadable.swift */; };
 		AE9D56DF25C1BB6800E006E2 /* CatalogDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9D56DE25C1BB6800E006E2 /* CatalogDataSource.swift */; };
 		AE9D56E425C1BBDA00E006E2 /* CatalogLayoutCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9D56E325C1BBDA00E006E2 /* CatalogLayoutCalculator.swift */; };
+		AE9D56EA25C1BD2900E006E2 /* CatalogAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9D56E925C1BD2900E006E2 /* CatalogAssembly.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,7 @@
 		AE9D56D525C1B89000E006E2 /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
 		AE9D56DE25C1BB6800E006E2 /* CatalogDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogDataSource.swift; sourceTree = "<group>"; };
 		AE9D56E325C1BBDA00E006E2 /* CatalogLayoutCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogLayoutCalculator.swift; sourceTree = "<group>"; };
+		AE9D56E925C1BD2900E006E2 /* CatalogAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogAssembly.swift; sourceTree = "<group>"; };
 		C1A1C4106DC6CA575EF286C8 /* Pods-OnlineShop-OnlineShopUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnlineShop-OnlineShopUITests.release.xcconfig"; path = "Target Support Files/Pods-OnlineShop-OnlineShopUITests/Pods-OnlineShop-OnlineShopUITests.release.xcconfig"; sourceTree = "<group>"; };
 		DADA49929A38755D053743DB /* Pods-OnlineShopTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnlineShopTests.debug.xcconfig"; path = "Target Support Files/Pods-OnlineShopTests/Pods-OnlineShopTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E99EB8F55C70F1674827436C /* Pods-OnlineShop-OnlineShopUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnlineShop-OnlineShopUITests.debug.xcconfig"; path = "Target Support Files/Pods-OnlineShop-OnlineShopUITests/Pods-OnlineShop-OnlineShopUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 		AE9D563E25C1AED400E006E2 /* OnlineShop */ = {
 			isa = PBXGroup;
 			children = (
+				AE9D56E825C1BD0C00E006E2 /* Assembly */,
 				AE9D56DD25C1BB4F00E006E2 /* DataSources */,
 				AE9D56D425C1B86E00E006E2 /* Protocols */,
 				AE9D56C925C1B50E00E006E2 /* Custom views */,
@@ -295,6 +298,14 @@
 				AE9D56DE25C1BB6800E006E2 /* CatalogDataSource.swift */,
 			);
 			path = DataSources;
+			sourceTree = "<group>";
+		};
+		AE9D56E825C1BD0C00E006E2 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				AE9D56E925C1BD2900E006E2 /* CatalogAssembly.swift */,
+			);
+			path = Assembly;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -544,6 +555,7 @@
 				AE9D56B625C1B3D700E006E2 /* CatalogInteractor.swift in Sources */,
 				AE9D56A925C1B26100E006E2 /* Product.swift in Sources */,
 				AE9D56DF25C1BB6800E006E2 /* CatalogDataSource.swift in Sources */,
+				AE9D56EA25C1BD2900E006E2 /* CatalogAssembly.swift in Sources */,
 				AE9D56A325C1B1CA00E006E2 /* Codable+Dictionary.swift in Sources */,
 				AE9D56BE25C1B3E300E006E2 /* CatalogPresenter.swift in Sources */,
 				AE9D56CF25C1B57200E006E2 /* ProductCollectionViewCell.swift in Sources */,
