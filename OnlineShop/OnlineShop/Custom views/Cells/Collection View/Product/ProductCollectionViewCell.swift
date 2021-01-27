@@ -8,7 +8,7 @@
 import UIKit
 import Kingfisher
 
-class ProductCollectionViewCell: UICollectionViewCell {
+class ProductCollectionViewCell: UICollectionViewCell, NibLoadable {
     
     @IBOutlet weak private var imageView: UIImageView!
     @IBOutlet weak private var nameLabel: UILabel!

@@ -68,6 +68,13 @@
                 <constraint firstItem="4D6-bL-zSY" firstAttribute="trailing" secondItem="wcl-DY-zFm" secondAttribute="trailing" id="xUF-d5-l1R"/>
             </constraints>
             <size key="customSize" width="372" height="176"/>
+            <connections>
+                <outlet property="button" destination="4D6-bL-zSY" id="g4l-Bx-9zr"/>
+                <outlet property="imageView" destination="gIO-LX-QAR" id="L34-sQ-oMX"/>
+                <outlet property="nameLabel" destination="5dp-lu-S33" id="LmW-GR-krb"/>
+                <outlet property="priceLabel" destination="pLf-Kz-BJe" id="EQp-AZ-9GX"/>
+                <outlet property="ratingLabel" destination="wcl-DY-zFm" id="Pj5-tx-OFH"/>
+            </connections>
             <point key="canvasLocation" x="243.47826086956525" y="134.59821428571428"/>
         </collectionViewCell>
     </objects>
