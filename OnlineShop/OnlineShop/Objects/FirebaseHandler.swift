@@ -33,6 +33,7 @@ struct FirebaseHandler {
         return new
     }
 
+    @discardableResult
     func read<T: Codable>(closure: ((T?) -> Void)?) -> FirebaseHandler {
         actualReference.observeSingleEvent(of: .value) { (snapshot) in
             if let dict = snapshot.value as? [String: Any] {

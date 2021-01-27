@@ -11,4 +11,11 @@ struct Product: Codable {
     var price: Double?
     var rating: Float?
     var imageUrl: String?
+    
+    init(realmProduct: RealmProduct) {
+        self.name = realmProduct.name
+        self.price = realmProduct.price
+        self.rating = realmProduct.rating
+        self.imageUrl = realmProduct.imageUrl
+    }
 }

@@ -9,9 +9,10 @@ import UIKit
 
 class CatalogAssembly {
     func assembly() -> UIViewController {
+        let service: ProductService = ProductsServiceImplementation()
         let vc = CatalogViewController()
         let presenter = CatalogPresenter()
-        let interactor = CatalogInteractor()
+        let interactor = CatalogInteractor(service: service)
 
         vc.presenter = presenter
         presenter.view = vc

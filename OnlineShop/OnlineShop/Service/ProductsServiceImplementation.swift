@@ -9,8 +9,13 @@ import Foundation
 
 class ProductsServiceImplementation: ProductService {
     func fetchProducts(_ clouser: (([Product]) -> Void)?) {
+        let cachedRealmProducts: [RealmProduct] = DatabaseManager.shared.fetch()
+        let cachedProducts = cachedRealmProducts.map { Product(realmProduct: $0) }
+        
         FirebaseHandler().read { (response: [String: Product]?) in
             let products = (response ?? [:]).map { $0.value }
+            let realmProducts = products.map { RealmProduct(product: $0) }
+            DatabaseManager.shared.add(realmProducts)
             clouser?(products)
         }
     }

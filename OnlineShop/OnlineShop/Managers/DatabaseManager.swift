@@ -14,9 +14,9 @@ class DatabaseManager {
     
     private lazy var realm = try! Realm()
     
-    func add(_ object: Object) {
+    func add(_ objects: [Object]) {
         try! realm.write {
-            self.realm.add(object, update: .all)
+            self.realm.add(objects, update: .all)
         }
     }
     
