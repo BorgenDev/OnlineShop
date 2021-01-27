@@ -24,6 +24,8 @@
 		AE9D56BE25C1B3E300E006E2 /* CatalogPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9D56BD25C1B3E300E006E2 /* CatalogPresenter.swift */; };
 		AE9D56C425C1B3FE00E006E2 /* CatalogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9D56C225C1B3FE00E006E2 /* CatalogViewController.swift */; };
 		AE9D56C525C1B3FE00E006E2 /* CatalogViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE9D56C325C1B3FE00E006E2 /* CatalogViewController.xib */; };
+		AE9D56CF25C1B57200E006E2 /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9D56CD25C1B57200E006E2 /* ProductCollectionViewCell.swift */; };
+		AE9D56D025C1B57200E006E2 /* ProductCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE9D56CE25C1B57200E006E2 /* ProductCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +72,8 @@
 		AE9D56BD25C1B3E300E006E2 /* CatalogPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogPresenter.swift; sourceTree = "<group>"; };
 		AE9D56C225C1B3FE00E006E2 /* CatalogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogViewController.swift; sourceTree = "<group>"; };
 		AE9D56C325C1B3FE00E006E2 /* CatalogViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CatalogViewController.xib; sourceTree = "<group>"; };
+		AE9D56CD25C1B57200E006E2 /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
+		AE9D56CE25C1B57200E006E2 /* ProductCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductCollectionViewCell.xib; sourceTree = "<group>"; };
 		C1A1C4106DC6CA575EF286C8 /* Pods-OnlineShop-OnlineShopUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnlineShop-OnlineShopUITests.release.xcconfig"; path = "Target Support Files/Pods-OnlineShop-OnlineShopUITests/Pods-OnlineShop-OnlineShopUITests.release.xcconfig"; sourceTree = "<group>"; };
 		DADA49929A38755D053743DB /* Pods-OnlineShopTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnlineShopTests.debug.xcconfig"; path = "Target Support Files/Pods-OnlineShopTests/Pods-OnlineShopTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E99EB8F55C70F1674827436C /* Pods-OnlineShop-OnlineShopUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnlineShop-OnlineShopUITests.debug.xcconfig"; path = "Target Support Files/Pods-OnlineShop-OnlineShopUITests/Pods-OnlineShop-OnlineShopUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -151,6 +155,7 @@
 		AE9D563E25C1AED400E006E2 /* OnlineShop */ = {
 			isa = PBXGroup;
 			children = (
+				AE9D56C925C1B50E00E006E2 /* Custom views */,
 				AE9D56B325C1B3B700E006E2 /* Screen */,
 				AE9D56A725C1B24800E006E2 /* Model */,
 				AE9D56A125C1B19E00E006E2 /* Extensions */,
@@ -232,6 +237,39 @@
 				AE9D56C325C1B3FE00E006E2 /* CatalogViewController.xib */,
 			);
 			path = Catalog;
+			sourceTree = "<group>";
+		};
+		AE9D56C925C1B50E00E006E2 /* Custom views */ = {
+			isa = PBXGroup;
+			children = (
+				AE9D56CA25C1B52300E006E2 /* Cells */,
+			);
+			path = "Custom views";
+			sourceTree = "<group>";
+		};
+		AE9D56CA25C1B52300E006E2 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				AE9D56CB25C1B52A00E006E2 /* Collection View */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		AE9D56CB25C1B52A00E006E2 /* Collection View */ = {
+			isa = PBXGroup;
+			children = (
+				AE9D56CC25C1B53D00E006E2 /* Product */,
+			);
+			path = "Collection View";
+			sourceTree = "<group>";
+		};
+		AE9D56CC25C1B53D00E006E2 /* Product */ = {
+			isa = PBXGroup;
+			children = (
+				AE9D56CD25C1B57200E006E2 /* ProductCollectionViewCell.swift */,
+				AE9D56CE25C1B57200E006E2 /* ProductCollectionViewCell.xib */,
+			);
+			path = Product;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -344,6 +382,7 @@
 			files = (
 				AE9D56C525C1B3FE00E006E2 /* CatalogViewController.xib in Resources */,
 				AE9D564C25C1AED600E006E2 /* LaunchScreen.storyboard in Resources */,
+				AE9D56D025C1B57200E006E2 /* ProductCollectionViewCell.xib in Resources */,
 				AE9D569125C1B0D700E006E2 /* GoogleService-Info.plist in Resources */,
 				AE9D564925C1AED600E006E2 /* Assets.xcassets in Resources */,
 			);
@@ -480,6 +519,7 @@
 				AE9D56A925C1B26100E006E2 /* Product.swift in Sources */,
 				AE9D56A325C1B1CA00E006E2 /* Codable+Dictionary.swift in Sources */,
 				AE9D56BE25C1B3E300E006E2 /* CatalogPresenter.swift in Sources */,
+				AE9D56CF25C1B57200E006E2 /* ProductCollectionViewCell.swift in Sources */,
 				AE9D564225C1AED400E006E2 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
