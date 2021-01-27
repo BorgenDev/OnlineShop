@@ -9,11 +9,9 @@ import Foundation
 
 class CatalogInteractor {
     weak var presenter: CatalogPresenter?
+    private let service: ProductService?
     
     func fetchProducts() {
-        FirebaseHandler().read { (response: [String: Product]?) in
-            let products = (response ?? [:]).map { $0.value }
-            self.presenter?.didFetchProducts(products)
-        }
+
     }
 }

@@ -31,6 +31,8 @@
 		AE9D56E425C1BBDA00E006E2 /* CatalogLayoutCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9D56E325C1BBDA00E006E2 /* CatalogLayoutCalculator.swift */; };
 		AE9D56EA25C1BD2900E006E2 /* CatalogAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9D56E925C1BD2900E006E2 /* CatalogAssembly.swift */; };
 		AE9D56F925C1D17B00E006E2 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9D56F825C1D17B00E006E2 /* DatabaseManager.swift */; };
+		AE9D571425C1E2F400E006E2 /* ProductService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9D571325C1E2F400E006E2 /* ProductService.swift */; };
+		AE9D571C25C1E37500E006E2 /* ProductsServiceImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9D571B25C1E37500E006E2 /* ProductsServiceImplementation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +86,8 @@
 		AE9D56E325C1BBDA00E006E2 /* CatalogLayoutCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogLayoutCalculator.swift; sourceTree = "<group>"; };
 		AE9D56E925C1BD2900E006E2 /* CatalogAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogAssembly.swift; sourceTree = "<group>"; };
 		AE9D56F825C1D17B00E006E2 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		AE9D571325C1E2F400E006E2 /* ProductService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductService.swift; sourceTree = "<group>"; };
+		AE9D571B25C1E37500E006E2 /* ProductsServiceImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsServiceImplementation.swift; sourceTree = "<group>"; };
 		C1A1C4106DC6CA575EF286C8 /* Pods-OnlineShop-OnlineShopUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnlineShop-OnlineShopUITests.release.xcconfig"; path = "Target Support Files/Pods-OnlineShop-OnlineShopUITests/Pods-OnlineShop-OnlineShopUITests.release.xcconfig"; sourceTree = "<group>"; };
 		DADA49929A38755D053743DB /* Pods-OnlineShopTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnlineShopTests.debug.xcconfig"; path = "Target Support Files/Pods-OnlineShopTests/Pods-OnlineShopTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E99EB8F55C70F1674827436C /* Pods-OnlineShop-OnlineShopUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnlineShop-OnlineShopUITests.debug.xcconfig"; path = "Target Support Files/Pods-OnlineShop-OnlineShopUITests/Pods-OnlineShop-OnlineShopUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -165,6 +169,7 @@
 		AE9D563E25C1AED400E006E2 /* OnlineShop */ = {
 			isa = PBXGroup;
 			children = (
+				AE9D571225C1E2E500E006E2 /* Service */,
 				AE9D56F725C1D15600E006E2 /* Managers */,
 				AE9D56E825C1BD0C00E006E2 /* Assembly */,
 				AE9D56DD25C1BB4F00E006E2 /* DataSources */,
@@ -317,6 +322,15 @@
 				AE9D56F825C1D17B00E006E2 /* DatabaseManager.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		AE9D571225C1E2E500E006E2 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				AE9D571325C1E2F400E006E2 /* ProductService.swift */,
+				AE9D571B25C1E37500E006E2 /* ProductsServiceImplementation.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -560,6 +574,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE9D56C425C1B3FE00E006E2 /* CatalogViewController.swift in Sources */,
+				AE9D571C25C1E37500E006E2 /* ProductsServiceImplementation.swift in Sources */,
 				AE9D564025C1AED400E006E2 /* AppDelegate.swift in Sources */,
 				AE9D569A25C1B18400E006E2 /* FirebaseHandler.swift in Sources */,
 				AE9D56D625C1B89000E006E2 /* NibLoadable.swift in Sources */,
@@ -573,6 +588,7 @@
 				AE9D56CF25C1B57200E006E2 /* ProductCollectionViewCell.swift in Sources */,
 				AE9D564225C1AED400E006E2 /* SceneDelegate.swift in Sources */,
 				AE9D56E425C1BBDA00E006E2 /* CatalogLayoutCalculator.swift in Sources */,
+				AE9D571425C1E2F400E006E2 /* ProductService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
