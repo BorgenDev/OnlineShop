@@ -34,7 +34,7 @@ extension CatalogDataSource: UICollectionViewDataSource {
 extension CatalogDataSource: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let mainWidth = collectionView.frame.width
-        let calculator = CatalogLayoutCalculator(spacing: spacing, numberOfColumns: numberOfColumns, aspectRatio: 3/2)
+        let calculator = CatalogLayoutCalculator(spacing: spacing, numberOfColumns: numberOfColumns, aspectRatio: 2/3)
         return calculator.calculateSize(for: mainWidth)
     }
 
