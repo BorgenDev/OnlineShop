@@ -34,6 +34,10 @@
 		AE9D571425C1E2F400E006E2 /* ProductService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9D571325C1E2F400E006E2 /* ProductService.swift */; };
 		AE9D571C25C1E37500E006E2 /* ProductsServiceImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9D571B25C1E37500E006E2 /* ProductsServiceImplementation.swift */; };
 		AE9D572125C1E53500E006E2 /* RealmProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9D572025C1E53500E006E2 /* RealmProduct.swift */; };
+		AE9D572E25C2F05B00E006E2 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9D572C25C2F05B00E006E2 /* CartViewController.swift */; };
+		AE9D572F25C2F05B00E006E2 /* CartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE9D572D25C2F05B00E006E2 /* CartViewController.xib */; };
+		AE9D573625C2F31800E006E2 /* CartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9D573425C2F31800E006E2 /* CartTableViewCell.swift */; };
+		AE9D573725C2F31800E006E2 /* CartTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE9D573525C2F31800E006E2 /* CartTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +94,10 @@
 		AE9D571325C1E2F400E006E2 /* ProductService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductService.swift; sourceTree = "<group>"; };
 		AE9D571B25C1E37500E006E2 /* ProductsServiceImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsServiceImplementation.swift; sourceTree = "<group>"; };
 		AE9D572025C1E53500E006E2 /* RealmProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmProduct.swift; sourceTree = "<group>"; };
+		AE9D572C25C2F05B00E006E2 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
+		AE9D572D25C2F05B00E006E2 /* CartViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartViewController.xib; sourceTree = "<group>"; };
+		AE9D573425C2F31800E006E2 /* CartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTableViewCell.swift; sourceTree = "<group>"; };
+		AE9D573525C2F31800E006E2 /* CartTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartTableViewCell.xib; sourceTree = "<group>"; };
 		C1A1C4106DC6CA575EF286C8 /* Pods-OnlineShop-OnlineShopUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnlineShop-OnlineShopUITests.release.xcconfig"; path = "Target Support Files/Pods-OnlineShop-OnlineShopUITests/Pods-OnlineShop-OnlineShopUITests.release.xcconfig"; sourceTree = "<group>"; };
 		DADA49929A38755D053743DB /* Pods-OnlineShopTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnlineShopTests.debug.xcconfig"; path = "Target Support Files/Pods-OnlineShopTests/Pods-OnlineShopTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E99EB8F55C70F1674827436C /* Pods-OnlineShop-OnlineShopUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnlineShop-OnlineShopUITests.debug.xcconfig"; path = "Target Support Files/Pods-OnlineShop-OnlineShopUITests/Pods-OnlineShop-OnlineShopUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -246,6 +254,7 @@
 		AE9D56B325C1B3B700E006E2 /* Screen */ = {
 			isa = PBXGroup;
 			children = (
+				AE9D572B25C2EFF500E006E2 /* Cart */,
 				AE9D56B425C1B3C200E006E2 /* Catalog */,
 			);
 			path = Screen;
@@ -273,6 +282,7 @@
 		AE9D56CA25C1B52300E006E2 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				AE9D573325C2F09900E006E2 /* TableView */,
 				AE9D56CB25C1B52A00E006E2 /* Collection View */,
 			);
 			path = Cells;
@@ -334,6 +344,24 @@
 				AE9D571B25C1E37500E006E2 /* ProductsServiceImplementation.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		AE9D572B25C2EFF500E006E2 /* Cart */ = {
+			isa = PBXGroup;
+			children = (
+				AE9D572C25C2F05B00E006E2 /* CartViewController.swift */,
+				AE9D572D25C2F05B00E006E2 /* CartViewController.xib */,
+			);
+			path = Cart;
+			sourceTree = "<group>";
+		};
+		AE9D573325C2F09900E006E2 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				AE9D573425C2F31800E006E2 /* CartTableViewCell.swift */,
+				AE9D573525C2F31800E006E2 /* CartTableViewCell.xib */,
+			);
+			path = TableView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -446,8 +474,10 @@
 			files = (
 				AE9D56C525C1B3FE00E006E2 /* CatalogViewController.xib in Resources */,
 				AE9D564C25C1AED600E006E2 /* LaunchScreen.storyboard in Resources */,
+				AE9D573725C2F31800E006E2 /* CartTableViewCell.xib in Resources */,
 				AE9D56D025C1B57200E006E2 /* ProductCollectionViewCell.xib in Resources */,
 				AE9D569125C1B0D700E006E2 /* GoogleService-Info.plist in Resources */,
+				AE9D572F25C2F05B00E006E2 /* CartViewController.xib in Resources */,
 				AE9D564925C1AED600E006E2 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -589,9 +619,11 @@
 				AE9D572125C1E53500E006E2 /* RealmProduct.swift in Sources */,
 				AE9D56A325C1B1CA00E006E2 /* Codable+Dictionary.swift in Sources */,
 				AE9D56BE25C1B3E300E006E2 /* CatalogPresenter.swift in Sources */,
+				AE9D573625C2F31800E006E2 /* CartTableViewCell.swift in Sources */,
 				AE9D56CF25C1B57200E006E2 /* ProductCollectionViewCell.swift in Sources */,
 				AE9D564225C1AED400E006E2 /* SceneDelegate.swift in Sources */,
 				AE9D56E425C1BBDA00E006E2 /* CatalogLayoutCalculator.swift in Sources */,
+				AE9D572E25C2F05B00E006E2 /* CartViewController.swift in Sources */,
 				AE9D571425C1E2F400E006E2 /* ProductService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
