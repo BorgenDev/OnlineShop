@@ -16,6 +16,7 @@ class ProductCollectionViewCell: UICollectionViewCell, NibLoadable {
     @IBOutlet weak private var ratingLabel: UILabel!
     @IBOutlet private weak var button: UIButton!
 
+    var buttonClocked: (() -> Void)?
     override func awakeFromNib() {
         super.awakeFromNib()
         button.layer.cornerRadius = 10
@@ -30,6 +31,7 @@ class ProductCollectionViewCell: UICollectionViewCell, NibLoadable {
         
         priceLabel.minimumScaleFactor = 0.2
         priceLabel.adjustsFontSizeToFitWidth = true
+        addTargets()
     }
 
     func configure(by product: Product) {
@@ -38,5 +40,12 @@ class ProductCollectionViewCell: UICollectionViewCell, NibLoadable {
         ratingLabel.text = "Рейтинг продукта: \(product.rating?.rounded() ?? 0)"
         imageView.kf.setImage(with: URL(string: product.imageUrl ?? ""))
     }
+    
+    private func addTargets() {
+        button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+    }
 
+    @objc private func buttonAction() {
+        buttonClocked?()
+    }
 }
