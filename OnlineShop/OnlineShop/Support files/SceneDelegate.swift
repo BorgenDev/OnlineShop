@@ -18,9 +18,18 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let scene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: scene)
-        let assembly = CatalogAssembly()
-        let vc = assembly.assembly()
-        window?.rootViewController = UINavigationController(rootViewController: vc)
+        let catalogAssembly = CatalogAssembly()
+        let cartAssembly = CartAssembly()
+        let catalogViewController = catalogAssembly.assembly()
+        let cartViewController = cartAssembly.assembly()
+        
+        let catalogNC = UINavigationController(rootViewController: catalogViewController)
+        let cartNC = UINavigationController(rootViewController: cartViewController)
+        cartNC.tabBarItem = UITabBarItem(title: "Корзина", image: UIImage(systemName: "cart.fill"), tag: 0)
+        catalogNC.tabBarItem = UITabBarItem(title: "Каталог", image: UIImage(systemName: "bag.fill"), tag: 1)
+        let tabBarController = UITabBarController()
+        tabBarController.setViewControllers([catalogNC, cartNC], animated: true)
+        window?.rootViewController = tabBarController
         window?.makeKeyAndVisible()
     }
 
