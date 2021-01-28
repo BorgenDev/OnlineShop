@@ -12,6 +12,8 @@ class CatalogDataSource: NSObject {
     private let numberOfColumns = 2
 
     private(set) var products: [Product] = []
+    
+    var productShouldBeAddedToCart: ((Product) -> Void)?
 
     func load(products: [Product]) {
         self.products = products
@@ -23,6 +25,9 @@ extension CatalogDataSource: UICollectionViewDataSource {
         let cell: ProductCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: ProductCollectionViewCell.nibName, for: indexPath) as! ProductCollectionViewCell
         let product = products[indexPath.row]
         cell.configure(by: product)
+        cell.buttonClocked = { [weak self] in
+            self?.productShouldBeAddedToCart?(product)
+        }
         return cell
     }
 
