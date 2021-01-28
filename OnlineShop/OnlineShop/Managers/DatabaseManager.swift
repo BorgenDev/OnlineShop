@@ -15,7 +15,13 @@ class DatabaseManager {
     private lazy var realm = try! Realm()
     
     func add(_ objects: [Object]) {
-        try! realm.write {
+        write {
+            self.realm.add(objects, update: .all)
+        }
+    }
+    
+    func add(_ objects: Object) {
+        write {
             self.realm.add(objects, update: .all)
         }
     }
@@ -27,6 +33,12 @@ class DatabaseManager {
     func delete(_ object: Object) {
         try! realm.write {
             self.realm.delete(object)
+        }
+    }
+    
+    func write(_ clouser: (() -> Void)?) {
+        try! realm.write {
+            clouser?()
         }
     }
     
