@@ -16,6 +16,9 @@ class CatalogPresenter {
     
     func didFetchProducts(_ products: [Product]) {
         dataSource.load(products: products)
+        dataSource.productShouldBeAddedToCart = { [weak self] product in
+            self?.interactor?.addProductToCart(product)
+        }
         view?.reloadView()
     }
 

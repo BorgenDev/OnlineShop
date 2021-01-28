@@ -15,6 +15,10 @@ class CatalogInteractor {
         self.service = service
     }
     
+    func addProductToCart(_ product: Product) {
+        CartManager.shared.add(product: product)
+    }
+    
     func fetchProducts() {
         service.fetchProducts { (products) in
             self.presenter?.didFetchProducts(products)
