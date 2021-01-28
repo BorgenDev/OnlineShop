@@ -19,6 +19,7 @@
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mU0-2N-yY7">
                         <rect key="frame" x="8" y="8" width="74" height="74"/>
                         <constraints>
+                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="74" id="4sh-F6-z8c"/>
                             <constraint firstAttribute="width" secondItem="mU0-2N-yY7" secondAttribute="height" multiplier="1:1" id="D3y-jq-hVX"/>
                         </constraints>
                     </imageView>
@@ -45,7 +46,7 @@
                     <constraint firstItem="mky-cb-NAs" firstAttribute="leading" secondItem="mU0-2N-yY7" secondAttribute="trailing" constant="8" id="gpf-wE-CuH"/>
                     <constraint firstItem="mU0-2N-yY7" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="qRY-q4-WLU"/>
                     <constraint firstAttribute="trailing" secondItem="mky-cb-NAs" secondAttribute="trailing" constant="8" id="uOy-t8-D49"/>
-                    <constraint firstAttribute="bottom" secondItem="mU0-2N-yY7" secondAttribute="bottom" constant="8" id="vz5-6o-yNS"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="mU0-2N-yY7" secondAttribute="bottom" constant="8" id="vz5-6o-yNS"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

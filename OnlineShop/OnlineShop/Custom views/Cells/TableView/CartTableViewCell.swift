@@ -18,6 +18,7 @@ class CartTableViewCell: UITableViewCell, NibLoadable {
         productView.backgroundColor = .gray
         productView.layer.cornerRadius = 8
         productView.contentMode = .scaleAspectFill
+        selectionStyle = .none
     }
 
     func configure(by product: Product) {
