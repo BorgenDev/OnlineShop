@@ -10,6 +10,12 @@
 		0ED461B9DB9742190D50B69E /* Pods_OnlineShopTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA11E494AA7FC90980FF49A6 /* Pods_OnlineShopTests.framework */; };
 		3DFE1B853CCA37A68F97B2E0 /* Pods_OnlineShop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9861597DEF9C81DFA07B89B5 /* Pods_OnlineShop.framework */; };
 		5D9A9D4C8FBA74F7644A4D63 /* Pods_OnlineShop_OnlineShopUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DE0B7B54C70A61C4F50C017 /* Pods_OnlineShop_OnlineShopUITests.framework */; };
+		AE33F1EE25C2F9490078FAFB /* CartPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE33F1ED25C2F9490078FAFB /* CartPresenter.swift */; };
+		AE33F1F325C2F9650078FAFB /* CartInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE33F1F225C2F9650078FAFB /* CartInteractor.swift */; };
+		AE33F1F825C2FA2A0078FAFB /* CartDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE33F1F725C2FA2A0078FAFB /* CartDataSource.swift */; };
+		AE33F20025C306C40078FAFB /* RealmCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE33F1FF25C306C40078FAFB /* RealmCard.swift */; };
+		AE33F20525C307470078FAFB /* CartManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE33F20425C307470078FAFB /* CartManager.swift */; };
+		AE33F20A25C31D9F0078FAFB /* CartAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE33F20925C31D9F0078FAFB /* CartAssembly.swift */; };
 		AE9D564025C1AED400E006E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9D563F25C1AED400E006E2 /* AppDelegate.swift */; };
 		AE9D564225C1AED400E006E2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9D564125C1AED400E006E2 /* SceneDelegate.swift */; };
 		AE9D564925C1AED600E006E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE9D564825C1AED600E006E2 /* Assets.xcassets */; };
@@ -64,6 +70,12 @@
 		4DE0B7B54C70A61C4F50C017 /* Pods_OnlineShop_OnlineShopUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OnlineShop_OnlineShopUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9861597DEF9C81DFA07B89B5 /* Pods_OnlineShop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OnlineShop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA11E494AA7FC90980FF49A6 /* Pods_OnlineShopTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OnlineShopTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE33F1ED25C2F9490078FAFB /* CartPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartPresenter.swift; sourceTree = "<group>"; };
+		AE33F1F225C2F9650078FAFB /* CartInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartInteractor.swift; sourceTree = "<group>"; };
+		AE33F1F725C2FA2A0078FAFB /* CartDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartDataSource.swift; sourceTree = "<group>"; };
+		AE33F1FF25C306C40078FAFB /* RealmCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmCard.swift; sourceTree = "<group>"; };
+		AE33F20425C307470078FAFB /* CartManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartManager.swift; sourceTree = "<group>"; };
+		AE33F20925C31D9F0078FAFB /* CartAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartAssembly.swift; sourceTree = "<group>"; };
 		AE9D563C25C1AED400E006E2 /* OnlineShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnlineShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE9D563F25C1AED400E006E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AE9D564125C1AED400E006E2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -247,6 +259,7 @@
 			children = (
 				AE9D56A825C1B26100E006E2 /* Product.swift */,
 				AE9D572025C1E53500E006E2 /* RealmProduct.swift */,
+				AE33F1FF25C306C40078FAFB /* RealmCard.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -317,6 +330,7 @@
 			isa = PBXGroup;
 			children = (
 				AE9D56DE25C1BB6800E006E2 /* CatalogDataSource.swift */,
+				AE33F1F725C2FA2A0078FAFB /* CartDataSource.swift */,
 			);
 			path = DataSources;
 			sourceTree = "<group>";
@@ -325,6 +339,7 @@
 			isa = PBXGroup;
 			children = (
 				AE9D56E925C1BD2900E006E2 /* CatalogAssembly.swift */,
+				AE33F20925C31D9F0078FAFB /* CartAssembly.swift */,
 			);
 			path = Assembly;
 			sourceTree = "<group>";
@@ -333,6 +348,7 @@
 			isa = PBXGroup;
 			children = (
 				AE9D56F825C1D17B00E006E2 /* DatabaseManager.swift */,
+				AE33F20425C307470078FAFB /* CartManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -349,6 +365,8 @@
 		AE9D572B25C2EFF500E006E2 /* Cart */ = {
 			isa = PBXGroup;
 			children = (
+				AE33F1ED25C2F9490078FAFB /* CartPresenter.swift */,
+				AE33F1F225C2F9650078FAFB /* CartInteractor.swift */,
 				AE9D572C25C2F05B00E006E2 /* CartViewController.swift */,
 				AE9D572D25C2F05B00E006E2 /* CartViewController.xib */,
 			);
@@ -606,6 +624,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE33F20A25C31D9F0078FAFB /* CartAssembly.swift in Sources */,
+				AE33F1F825C2FA2A0078FAFB /* CartDataSource.swift in Sources */,
+				AE33F20525C307470078FAFB /* CartManager.swift in Sources */,
+				AE33F20025C306C40078FAFB /* RealmCard.swift in Sources */,
 				AE9D56C425C1B3FE00E006E2 /* CatalogViewController.swift in Sources */,
 				AE9D571C25C1E37500E006E2 /* ProductsServiceImplementation.swift in Sources */,
 				AE9D564025C1AED400E006E2 /* AppDelegate.swift in Sources */,
@@ -622,9 +644,11 @@
 				AE9D573625C2F31800E006E2 /* CartTableViewCell.swift in Sources */,
 				AE9D56CF25C1B57200E006E2 /* ProductCollectionViewCell.swift in Sources */,
 				AE9D564225C1AED400E006E2 /* SceneDelegate.swift in Sources */,
+				AE33F1EE25C2F9490078FAFB /* CartPresenter.swift in Sources */,
 				AE9D56E425C1BBDA00E006E2 /* CatalogLayoutCalculator.swift in Sources */,
 				AE9D572E25C2F05B00E006E2 /* CartViewController.swift in Sources */,
 				AE9D571425C1E2F400E006E2 /* ProductService.swift in Sources */,
+				AE33F1F325C2F9650078FAFB /* CartInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
