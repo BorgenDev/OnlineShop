@@ -9,8 +9,8 @@ import Foundation
 import RealmSwift
 
 class RealmCard: Object {
-    var sessionID: String = ""
-    var productIds: List<Int> = List()
+    @objc dynamic var sessionID: String = ""
+    var productIds: List<String> = List()
     
     @objc override class func primaryKey() -> String? {
         return "sessionID"
