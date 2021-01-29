@@ -15,7 +15,8 @@ class CatalogPresenter {
     private let dataSource: CatalogDataSource = .init()
     
     func didFetchProducts(_ products: [Product]) {
-        dataSource.load(products: products)
+        let filtredProducts = filteringProductsByPrice(products)
+        dataSource.load(products: filtredProducts)
         dataSource.productShouldBeAddedToCart = { [weak self] product in
             self?.interactor?.addProductToCart(product)
         }
@@ -29,5 +30,19 @@ class CatalogPresenter {
     func subscribe(collectionView: UICollectionView) {
         collectionView.dataSource = dataSource
         collectionView.delegate = dataSource
+    }
+    
+    private func filteringProductsByPrice(_ products: [Product]) -> [Product] {
+        let filtredProduct = products.compactMap { $0.price }
+        let countOfProducts = filtredProduct.count
+        guard filtredProduct.count != 0 else {
+            return []
+        }
+        let sum = filtredProduct.reduce(0) { $0 + $1 }
+        let averageСost = Int(sum) / countOfProducts
+        
+        let finalProduct = products.filter { Int($0.price ?? 0.0) < averageСost }
+        
+        return finalProduct
     }
 }
