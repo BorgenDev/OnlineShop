@@ -10,6 +10,7 @@ import Swinject
 
 class MainContainer {
     private let containers: [Containerable]
+    let rootContainer: Container = Container()
     
     init(containers: [Containerable]) {
         self.containers = containers
