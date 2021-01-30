@@ -9,9 +9,9 @@ import Foundation
 
 class CatalogInteractor {
     weak var presenter: CatalogPresenter?
-    private let service: ProductService
+    private let service: ProductService?
     
-    init(service: ProductService) {
+    init(service: ProductService?) {
         self.service = service
     }
     
@@ -20,7 +20,7 @@ class CatalogInteractor {
     }
     
     func fetchProducts() {
-        service.fetchProducts { (products) in
+        service?.fetchProducts { (products) in
             self.presenter?.didFetchProducts(products)
         }
     }
