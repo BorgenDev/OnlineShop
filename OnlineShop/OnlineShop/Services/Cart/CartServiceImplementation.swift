@@ -8,16 +8,16 @@
 import Foundation
 import RealmSwift
 
-class CartManager {
-    static let shared = CartManager()
+class CartServiceImplementation: CartService {
     
-    private init() {}
+    var productsCountUpdated: ((Int) -> Void)?
     
     func fetchProducts() -> [Product] {
         let carts: [RealmCard] = DatabaseManager.shared.fetch()
         let cart = carts.first
         let productsIds = Array(cart?.productIds ?? List())
         let products: [RealmProduct] = DatabaseManager.shared.fetch()
+        
         let filteredProducts = products.filter { productsIds.contains($0.name) }.map { Product(realmProduct: $0) }
         return filteredProducts
     }
@@ -30,7 +30,9 @@ class CartManager {
         DatabaseManager.shared.write {
             cart.productIds.append(product.name ?? "")
         }
-        
-        DatabaseManager.shared.add(cart)
+       DatabaseManager.shared.add(cart)
+        let filteredProducts = self.fetchProducts()
+
+        productsCountUpdated?(filteredProducts.count)
     }
 }
