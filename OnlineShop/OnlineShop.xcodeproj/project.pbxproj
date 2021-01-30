@@ -14,13 +14,16 @@
 		AE33F1F325C2F9650078FAFB /* CartInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE33F1F225C2F9650078FAFB /* CartInteractor.swift */; };
 		AE33F1F825C2FA2A0078FAFB /* CartDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE33F1F725C2FA2A0078FAFB /* CartDataSource.swift */; };
 		AE33F20025C306C40078FAFB /* RealmCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE33F1FF25C306C40078FAFB /* RealmCard.swift */; };
-		AE33F20525C307470078FAFB /* CartManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE33F20425C307470078FAFB /* CartManager.swift */; };
+		AE33F20525C307470078FAFB /* CartServiceImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE33F20425C307470078FAFB /* CartServiceImplementation.swift */; };
 		AE33F20A25C31D9F0078FAFB /* CartAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE33F20925C31D9F0078FAFB /* CartAssembly.swift */; };
 		AE3D8DEC25C59A9200BD8D4F /* MainContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3D8DEB25C59A9200BD8D4F /* MainContainer.swift */; };
 		AE3D8DF425C59B7000BD8D4F /* CatalogContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3D8DF325C59B7000BD8D4F /* CatalogContainer.swift */; };
 		AE3D8DF925C59CDA00BD8D4F /* Containerable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3D8DF825C59CDA00BD8D4F /* Containerable.swift */; };
 		AE3D8DFE25C5A17C00BD8D4F /* ProductsServiceContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3D8DFD25C5A17C00BD8D4F /* ProductsServiceContainer.swift */; };
 		AE3D8E0425C5AB4C00BD8D4F /* ContainersController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3D8E0325C5AB4C00BD8D4F /* ContainersController.swift */; };
+		AE3D8E1F25C5B38E00BD8D4F /* CartService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3D8E1E25C5B38E00BD8D4F /* CartService.swift */; };
+		AE3D8E2825C5B40200BD8D4F /* CartServiceContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3D8E2725C5B40200BD8D4F /* CartServiceContainer.swift */; };
+		AE3D8E2D25C5B77400BD8D4F /* CartContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3D8E2C25C5B77400BD8D4F /* CartContainer.swift */; };
 		AE9D564025C1AED400E006E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9D563F25C1AED400E006E2 /* AppDelegate.swift */; };
 		AE9D564225C1AED400E006E2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9D564125C1AED400E006E2 /* SceneDelegate.swift */; };
 		AE9D564925C1AED600E006E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE9D564825C1AED600E006E2 /* Assets.xcassets */; };
@@ -79,13 +82,16 @@
 		AE33F1F225C2F9650078FAFB /* CartInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartInteractor.swift; sourceTree = "<group>"; };
 		AE33F1F725C2FA2A0078FAFB /* CartDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartDataSource.swift; sourceTree = "<group>"; };
 		AE33F1FF25C306C40078FAFB /* RealmCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmCard.swift; sourceTree = "<group>"; };
-		AE33F20425C307470078FAFB /* CartManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartManager.swift; sourceTree = "<group>"; };
+		AE33F20425C307470078FAFB /* CartServiceImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartServiceImplementation.swift; sourceTree = "<group>"; };
 		AE33F20925C31D9F0078FAFB /* CartAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartAssembly.swift; sourceTree = "<group>"; };
 		AE3D8DEB25C59A9200BD8D4F /* MainContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainContainer.swift; sourceTree = "<group>"; };
 		AE3D8DF325C59B7000BD8D4F /* CatalogContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogContainer.swift; sourceTree = "<group>"; };
 		AE3D8DF825C59CDA00BD8D4F /* Containerable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Containerable.swift; sourceTree = "<group>"; };
 		AE3D8DFD25C5A17C00BD8D4F /* ProductsServiceContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsServiceContainer.swift; sourceTree = "<group>"; };
 		AE3D8E0325C5AB4C00BD8D4F /* ContainersController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainersController.swift; sourceTree = "<group>"; };
+		AE3D8E1E25C5B38E00BD8D4F /* CartService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartService.swift; sourceTree = "<group>"; };
+		AE3D8E2725C5B40200BD8D4F /* CartServiceContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartServiceContainer.swift; sourceTree = "<group>"; };
+		AE3D8E2C25C5B77400BD8D4F /* CartContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartContainer.swift; sourceTree = "<group>"; };
 		AE9D563C25C1AED400E006E2 /* OnlineShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnlineShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE9D563F25C1AED400E006E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AE9D564125C1AED400E006E2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -180,8 +186,10 @@
 			isa = PBXGroup;
 			children = (
 				AE3D8DEB25C59A9200BD8D4F /* MainContainer.swift */,
-				AE3D8DF325C59B7000BD8D4F /* CatalogContainer.swift */,
 				AE3D8DFD25C5A17C00BD8D4F /* ProductsServiceContainer.swift */,
+				AE3D8E2725C5B40200BD8D4F /* CartServiceContainer.swift */,
+				AE3D8DF325C59B7000BD8D4F /* CatalogContainer.swift */,
+				AE3D8E2C25C5B77400BD8D4F /* CartContainer.swift */,
 			);
 			path = Containers;
 			sourceTree = "<group>";
@@ -192,6 +200,24 @@
 				AE3D8E0325C5AB4C00BD8D4F /* ContainersController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		AE3D8E1A25C5B35A00BD8D4F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AE9D571325C1E2F400E006E2 /* ProductService.swift */,
+				AE9D571B25C1E37500E006E2 /* ProductsServiceImplementation.swift */,
+			);
+			path = Products;
+			sourceTree = "<group>";
+		};
+		AE3D8E2325C5B3CB00BD8D4F /* Cart */ = {
+			isa = PBXGroup;
+			children = (
+				AE3D8E1E25C5B38E00BD8D4F /* CartService.swift */,
+				AE33F20425C307470078FAFB /* CartServiceImplementation.swift */,
+			);
+			path = Cart;
 			sourceTree = "<group>";
 		};
 		AE9D563325C1AED400E006E2 = {
@@ -221,7 +247,7 @@
 			children = (
 				AE3D8E0225C5AB1D00BD8D4F /* Controller */,
 				AE3D8DEA25C59A1D00BD8D4F /* Containers */,
-				AE9D571225C1E2E500E006E2 /* Service */,
+				AE9D571225C1E2E500E006E2 /* Services */,
 				AE9D56F725C1D15600E006E2 /* Managers */,
 				AE9D56E825C1BD0C00E006E2 /* Assembly */,
 				AE9D56DD25C1BB4F00E006E2 /* DataSources */,
@@ -379,18 +405,17 @@
 			isa = PBXGroup;
 			children = (
 				AE9D56F825C1D17B00E006E2 /* DatabaseManager.swift */,
-				AE33F20425C307470078FAFB /* CartManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
 		};
-		AE9D571225C1E2E500E006E2 /* Service */ = {
+		AE9D571225C1E2E500E006E2 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				AE9D571325C1E2F400E006E2 /* ProductService.swift */,
-				AE9D571B25C1E37500E006E2 /* ProductsServiceImplementation.swift */,
+				AE3D8E2325C5B3CB00BD8D4F /* Cart */,
+				AE3D8E1A25C5B35A00BD8D4F /* Products */,
 			);
-			path = Service;
+			path = Services;
 			sourceTree = "<group>";
 		};
 		AE9D572B25C2EFF500E006E2 /* Cart */ = {
@@ -657,13 +682,14 @@
 			files = (
 				AE33F20A25C31D9F0078FAFB /* CartAssembly.swift in Sources */,
 				AE33F1F825C2FA2A0078FAFB /* CartDataSource.swift in Sources */,
-				AE33F20525C307470078FAFB /* CartManager.swift in Sources */,
+				AE33F20525C307470078FAFB /* CartServiceImplementation.swift in Sources */,
 				AE3D8DFE25C5A17C00BD8D4F /* ProductsServiceContainer.swift in Sources */,
 				AE33F20025C306C40078FAFB /* RealmCard.swift in Sources */,
 				AE9D56C425C1B3FE00E006E2 /* CatalogViewController.swift in Sources */,
 				AE9D571C25C1E37500E006E2 /* ProductsServiceImplementation.swift in Sources */,
 				AE9D564025C1AED400E006E2 /* AppDelegate.swift in Sources */,
 				AE9D569A25C1B18400E006E2 /* FirebaseHandler.swift in Sources */,
+				AE3D8E2D25C5B77400BD8D4F /* CartContainer.swift in Sources */,
 				AE9D56D625C1B89000E006E2 /* NibLoadable.swift in Sources */,
 				AE9D56B625C1B3D700E006E2 /* CatalogInteractor.swift in Sources */,
 				AE9D56A925C1B26100E006E2 /* Product.swift in Sources */,
@@ -674,6 +700,8 @@
 				AE9D56A325C1B1CA00E006E2 /* Codable+Dictionary.swift in Sources */,
 				AE9D56BE25C1B3E300E006E2 /* CatalogPresenter.swift in Sources */,
 				AE9D573625C2F31800E006E2 /* CartTableViewCell.swift in Sources */,
+				AE3D8E2825C5B40200BD8D4F /* CartServiceContainer.swift in Sources */,
+				AE3D8E1F25C5B38E00BD8D4F /* CartService.swift in Sources */,
 				AE9D56CF25C1B57200E006E2 /* ProductCollectionViewCell.swift in Sources */,
 				AE9D564225C1AED400E006E2 /* SceneDelegate.swift in Sources */,
 				AE3D8DF425C59B7000BD8D4F /* CatalogContainer.swift in Sources */,

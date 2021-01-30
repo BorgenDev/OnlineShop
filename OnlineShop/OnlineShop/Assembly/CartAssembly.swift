@@ -7,18 +7,15 @@
 
 import Foundation
 import UIKit
+import Swinject
 
 class CartAssembly {
-    func assembly() -> UIViewController {
-        let service: ProductService = ProductsServiceImplementation()
-        let vc = CartViewController()
-        let presenter = CartPresenter()
-        let interactor = CartInteractor(service: service)
-
-        vc.presenter = presenter
-        presenter.view = vc
-        presenter.interactor = interactor
-        interactor.presenter = presenter
-        return vc
+    private let container: Container
+    init(container: Container) {
+        self.container = container
+    }
+    
+    func assembly() -> UIViewController? {
+        return container.resolve(CartViewController.self)
     }
 }
