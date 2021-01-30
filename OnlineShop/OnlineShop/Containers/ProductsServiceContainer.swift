@@ -16,6 +16,6 @@ class ProductsServiceContainer: Containerable {
     func register() {
         rootContainer.register(ProductService.self) { (resolver) -> ProductService in
             return ProductsServiceImplementation()
-        }
+        }.inObjectScope(.container)
     }
 }
