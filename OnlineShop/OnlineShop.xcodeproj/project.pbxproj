@@ -19,6 +19,7 @@
 		AE3D8DEC25C59A9200BD8D4F /* MainContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3D8DEB25C59A9200BD8D4F /* MainContainer.swift */; };
 		AE3D8DF425C59B7000BD8D4F /* CatalogContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3D8DF325C59B7000BD8D4F /* CatalogContainer.swift */; };
 		AE3D8DF925C59CDA00BD8D4F /* Containerable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3D8DF825C59CDA00BD8D4F /* Containerable.swift */; };
+		AE3D8DFE25C5A17C00BD8D4F /* ProductsServiceContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3D8DFD25C5A17C00BD8D4F /* ProductsServiceContainer.swift */; };
 		AE9D564025C1AED400E006E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9D563F25C1AED400E006E2 /* AppDelegate.swift */; };
 		AE9D564225C1AED400E006E2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9D564125C1AED400E006E2 /* SceneDelegate.swift */; };
 		AE9D564925C1AED600E006E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE9D564825C1AED600E006E2 /* Assets.xcassets */; };
@@ -82,6 +83,7 @@
 		AE3D8DEB25C59A9200BD8D4F /* MainContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainContainer.swift; sourceTree = "<group>"; };
 		AE3D8DF325C59B7000BD8D4F /* CatalogContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogContainer.swift; sourceTree = "<group>"; };
 		AE3D8DF825C59CDA00BD8D4F /* Containerable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Containerable.swift; sourceTree = "<group>"; };
+		AE3D8DFD25C5A17C00BD8D4F /* ProductsServiceContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsServiceContainer.swift; sourceTree = "<group>"; };
 		AE9D563C25C1AED400E006E2 /* OnlineShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnlineShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE9D563F25C1AED400E006E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AE9D564125C1AED400E006E2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 			children = (
 				AE3D8DEB25C59A9200BD8D4F /* MainContainer.swift */,
 				AE3D8DF325C59B7000BD8D4F /* CatalogContainer.swift */,
+				AE3D8DFD25C5A17C00BD8D4F /* ProductsServiceContainer.swift */,
 			);
 			path = Containers;
 			sourceTree = "<group>";
@@ -644,6 +647,7 @@
 				AE33F20A25C31D9F0078FAFB /* CartAssembly.swift in Sources */,
 				AE33F1F825C2FA2A0078FAFB /* CartDataSource.swift in Sources */,
 				AE33F20525C307470078FAFB /* CartManager.swift in Sources */,
+				AE3D8DFE25C5A17C00BD8D4F /* ProductsServiceContainer.swift in Sources */,
 				AE33F20025C306C40078FAFB /* RealmCard.swift in Sources */,
 				AE9D56C425C1B3FE00E006E2 /* CatalogViewController.swift in Sources */,
 				AE9D571C25C1E37500E006E2 /* ProductsServiceImplementation.swift in Sources */,
