@@ -23,17 +23,33 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(windowScene: scene)
 
         let catalogAssembly = CatalogAssembly(container: mainContainer.rootContainer)
-        let cartAssembly = CartAssembly()
+        let cartAssembly = CartAssembly(container: mainContainer.rootContainer)
         
         guard let catalogViewController = catalogAssembly.assembly() else {
             return
         }
         
-        let cartViewController = cartAssembly.assembly()
+        guard let cartViewController = cartAssembly.assembly() else {
+            return
+        }
         
+        let cartService = mainContainer.rootContainer.resolve(CartService.self)
+
         let catalogNC = UINavigationController(rootViewController: catalogViewController)
         let cartNC = UINavigationController(rootViewController: cartViewController)
+        
         cartNC.tabBarItem = UITabBarItem(title: "Корзина", image: UIImage(systemName: "cart.fill"), tag: 0)
+        let cartTabBarItem = cartNC.tabBarItem
+        let productsCount = cartService?.fetchProducts().count ?? 0
+        if productsCount > 0 {
+            cartTabBarItem?.badgeValue = "\(productsCount)"
+        } else {
+            cartTabBarItem?.badgeValue = nil
+        }
+        cartService?.productsCountUpdated = { count in
+            cartTabBarItem?.badgeValue = "\(count)"
+        }
+        
         catalogNC.tabBarItem = UITabBarItem(title: "Каталог", image: UIImage(systemName: "bag.fill"), tag: 1)
         let tabBarController = UITabBarController()
         tabBarController.setViewControllers([catalogNC, cartNC], animated: true)
