@@ -9,18 +9,20 @@ import Foundation
 
 class CatalogInteractor {
     weak var presenter: CatalogPresenter?
-    private let service: ProductService?
+    private let productService: ProductService?
+    private var cartService: CartService?
     
-    init(service: ProductService?) {
-        self.service = service
+    init(productService: ProductService?, cartService: CartService?) {
+        self.productService = productService
+        self.cartService = cartService
     }
     
     func addProductToCart(_ product: Product) {
-        CartManager.shared.add(product: product)
+        cartService?.add(product: product)
     }
     
     func fetchProducts() {
-        service?.fetchProducts { (products) in
+        productService?.fetchProducts { (products) in
             self.presenter?.didFetchProducts(products)
         }
     }
