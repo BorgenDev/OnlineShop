@@ -11,16 +11,24 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
 
-
+    let mainContainer = MainContainer()
+    private lazy var containersController = ContainerController(mainContainer: mainContainer)
+    
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
+        containersController.setupe()
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let scene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: scene)
-        let catalogAssembly = CatalogAssembly()
+
+        let catalogAssembly = CatalogAssembly(container: mainContainer.rootContainer)
         let cartAssembly = CartAssembly()
-        let catalogViewController = catalogAssembly.assembly()
+        
+        guard let catalogViewController = catalogAssembly.assembly() else {
+            return
+        }
+        
         let cartViewController = cartAssembly.assembly()
         
         let catalogNC = UINavigationController(rootViewController: catalogViewController)
