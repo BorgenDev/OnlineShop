@@ -9,11 +9,14 @@ import Foundation
 import Swinject
 
 class MainContainer {
-    private let containers: [Containerable]
+    private var containers: [Containerable] = []
     let rootContainer: Container = Container()
     
-    init(containers: [Containerable]) {
+    func register(containers: [Containerable]) {
         self.containers = containers
+        containers.forEach { (container) in
+            container.register()
+        }
     }
     
     func setup() {
