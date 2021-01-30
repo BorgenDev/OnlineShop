@@ -6,18 +6,16 @@
 //
 
 import UIKit
+import Swinject
 
 class CatalogAssembly {
-    func assembly() -> UIViewController {
-        let service: ProductService = ProductsServiceImplementation()
-        let vc = CatalogViewController()
-        let presenter = CatalogPresenter()
-        let interactor = CatalogInteractor(service: service)
-
-        vc.presenter = presenter
-        presenter.view = vc
-        presenter.interactor = interactor
-        interactor.presenter = presenter
-        return vc
+    
+    private let container: Container
+    init(container: Container) {
+        self.container = container
+    }
+    
+    func assembly() -> UIViewController? {
+        return container.resolve(CatalogViewController.self)
     }
 }
