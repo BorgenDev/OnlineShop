@@ -16,6 +16,25 @@ class CatalogContainer: Containerable {
     }
     
     func register() {
+        rootContainer.register(CatalogViewController.self) { (resolver) -> CatalogViewController in
+            let viewController = CatalogViewController()
+            viewController.presenter = resolver.resolve(CatalogPresenter.self)
+            return viewController
+        }
         
+        rootContainer.register(CatalogPresenter.self) { (resolver) -> CatalogPresenter in
+            let presenter = CatalogPresenter()
+            presenter.interactor = resolver.resolve(CatalogInteractor.self)
+            return presenter
+        }.initCompleted { (resolver, presenter) in
+            presenter.view = resolver.resolve(CatalogViewController.self)
+        }
+        
+        rootContainer.register(CatalogInteractor.self) { (resolver) -> CatalogInteractor in
+            let interactor = CatalogInteractor(service: resolver.resolve(ProductService.self))
+            return interactor
+        }.initCompleted { (resolver, interactor) in
+            interactor.presenter = resolver.resolve(CatalogPresenter.self)
+        }
     }
 }
