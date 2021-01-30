@@ -24,6 +24,8 @@
 		AE3D8E1F25C5B38E00BD8D4F /* CartService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3D8E1E25C5B38E00BD8D4F /* CartService.swift */; };
 		AE3D8E2825C5B40200BD8D4F /* CartServiceContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3D8E2725C5B40200BD8D4F /* CartServiceContainer.swift */; };
 		AE3D8E2D25C5B77400BD8D4F /* CartContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3D8E2C25C5B77400BD8D4F /* CartContainer.swift */; };
+		AE3D8E3C25C5DDC600BD8D4F /* DatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3D8E3B25C5DDC600BD8D4F /* DatabaseService.swift */; };
+		AE3D8E5A25C5E06000BD8D4F /* DatabaseServiceContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3D8E5925C5E06000BD8D4F /* DatabaseServiceContainer.swift */; };
 		AE9D564025C1AED400E006E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9D563F25C1AED400E006E2 /* AppDelegate.swift */; };
 		AE9D564225C1AED400E006E2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9D564125C1AED400E006E2 /* SceneDelegate.swift */; };
 		AE9D564925C1AED600E006E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE9D564825C1AED600E006E2 /* Assets.xcassets */; };
@@ -44,7 +46,7 @@
 		AE9D56DF25C1BB6800E006E2 /* CatalogDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9D56DE25C1BB6800E006E2 /* CatalogDataSource.swift */; };
 		AE9D56E425C1BBDA00E006E2 /* CatalogLayoutCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9D56E325C1BBDA00E006E2 /* CatalogLayoutCalculator.swift */; };
 		AE9D56EA25C1BD2900E006E2 /* CatalogAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9D56E925C1BD2900E006E2 /* CatalogAssembly.swift */; };
-		AE9D56F925C1D17B00E006E2 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9D56F825C1D17B00E006E2 /* DatabaseManager.swift */; };
+		AE9D56F925C1D17B00E006E2 /* DatabaseServiceImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9D56F825C1D17B00E006E2 /* DatabaseServiceImplementation.swift */; };
 		AE9D571425C1E2F400E006E2 /* ProductService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9D571325C1E2F400E006E2 /* ProductService.swift */; };
 		AE9D571C25C1E37500E006E2 /* ProductsServiceImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9D571B25C1E37500E006E2 /* ProductsServiceImplementation.swift */; };
 		AE9D572125C1E53500E006E2 /* RealmProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9D572025C1E53500E006E2 /* RealmProduct.swift */; };
@@ -92,6 +94,8 @@
 		AE3D8E1E25C5B38E00BD8D4F /* CartService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartService.swift; sourceTree = "<group>"; };
 		AE3D8E2725C5B40200BD8D4F /* CartServiceContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartServiceContainer.swift; sourceTree = "<group>"; };
 		AE3D8E2C25C5B77400BD8D4F /* CartContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartContainer.swift; sourceTree = "<group>"; };
+		AE3D8E3B25C5DDC600BD8D4F /* DatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseService.swift; sourceTree = "<group>"; };
+		AE3D8E5925C5E06000BD8D4F /* DatabaseServiceContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseServiceContainer.swift; sourceTree = "<group>"; };
 		AE9D563C25C1AED400E006E2 /* OnlineShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnlineShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE9D563F25C1AED400E006E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AE9D564125C1AED400E006E2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -118,7 +122,7 @@
 		AE9D56DE25C1BB6800E006E2 /* CatalogDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogDataSource.swift; sourceTree = "<group>"; };
 		AE9D56E325C1BBDA00E006E2 /* CatalogLayoutCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogLayoutCalculator.swift; sourceTree = "<group>"; };
 		AE9D56E925C1BD2900E006E2 /* CatalogAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogAssembly.swift; sourceTree = "<group>"; };
-		AE9D56F825C1D17B00E006E2 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		AE9D56F825C1D17B00E006E2 /* DatabaseServiceImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseServiceImplementation.swift; sourceTree = "<group>"; };
 		AE9D571325C1E2F400E006E2 /* ProductService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductService.swift; sourceTree = "<group>"; };
 		AE9D571B25C1E37500E006E2 /* ProductsServiceImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsServiceImplementation.swift; sourceTree = "<group>"; };
 		AE9D572025C1E53500E006E2 /* RealmProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmProduct.swift; sourceTree = "<group>"; };
@@ -190,6 +194,7 @@
 				AE3D8E2725C5B40200BD8D4F /* CartServiceContainer.swift */,
 				AE3D8DF325C59B7000BD8D4F /* CatalogContainer.swift */,
 				AE3D8E2C25C5B77400BD8D4F /* CartContainer.swift */,
+				AE3D8E5925C5E06000BD8D4F /* DatabaseServiceContainer.swift */,
 			);
 			path = Containers;
 			sourceTree = "<group>";
@@ -220,6 +225,15 @@
 			path = Cart;
 			sourceTree = "<group>";
 		};
+		AE3D8E4C25C5DE6100BD8D4F /* RealmService */ = {
+			isa = PBXGroup;
+			children = (
+				AE3D8E3B25C5DDC600BD8D4F /* DatabaseService.swift */,
+				AE9D56F825C1D17B00E006E2 /* DatabaseServiceImplementation.swift */,
+			);
+			path = RealmService;
+			sourceTree = "<group>";
+		};
 		AE9D563325C1AED400E006E2 = {
 			isa = PBXGroup;
 			children = (
@@ -248,7 +262,6 @@
 				AE3D8E0225C5AB1D00BD8D4F /* Controller */,
 				AE3D8DEA25C59A1D00BD8D4F /* Containers */,
 				AE9D571225C1E2E500E006E2 /* Services */,
-				AE9D56F725C1D15600E006E2 /* Managers */,
 				AE9D56E825C1BD0C00E006E2 /* Assembly */,
 				AE9D56DD25C1BB4F00E006E2 /* DataSources */,
 				AE9D56D425C1B86E00E006E2 /* Protocols */,
@@ -401,17 +414,10 @@
 			path = Assembly;
 			sourceTree = "<group>";
 		};
-		AE9D56F725C1D15600E006E2 /* Managers */ = {
-			isa = PBXGroup;
-			children = (
-				AE9D56F825C1D17B00E006E2 /* DatabaseManager.swift */,
-			);
-			path = Managers;
-			sourceTree = "<group>";
-		};
 		AE9D571225C1E2E500E006E2 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				AE3D8E4C25C5DE6100BD8D4F /* RealmService */,
 				AE3D8E2325C5B3CB00BD8D4F /* Cart */,
 				AE3D8E1A25C5B35A00BD8D4F /* Products */,
 			);
@@ -684,16 +690,18 @@
 				AE33F1F825C2FA2A0078FAFB /* CartDataSource.swift in Sources */,
 				AE33F20525C307470078FAFB /* CartServiceImplementation.swift in Sources */,
 				AE3D8DFE25C5A17C00BD8D4F /* ProductsServiceContainer.swift in Sources */,
+				AE3D8E3C25C5DDC600BD8D4F /* DatabaseService.swift in Sources */,
 				AE33F20025C306C40078FAFB /* RealmCard.swift in Sources */,
 				AE9D56C425C1B3FE00E006E2 /* CatalogViewController.swift in Sources */,
 				AE9D571C25C1E37500E006E2 /* ProductsServiceImplementation.swift in Sources */,
 				AE9D564025C1AED400E006E2 /* AppDelegate.swift in Sources */,
 				AE9D569A25C1B18400E006E2 /* FirebaseHandler.swift in Sources */,
+				AE3D8E5A25C5E06000BD8D4F /* DatabaseServiceContainer.swift in Sources */,
 				AE3D8E2D25C5B77400BD8D4F /* CartContainer.swift in Sources */,
 				AE9D56D625C1B89000E006E2 /* NibLoadable.swift in Sources */,
 				AE9D56B625C1B3D700E006E2 /* CatalogInteractor.swift in Sources */,
 				AE9D56A925C1B26100E006E2 /* Product.swift in Sources */,
-				AE9D56F925C1D17B00E006E2 /* DatabaseManager.swift in Sources */,
+				AE9D56F925C1D17B00E006E2 /* DatabaseServiceImplementation.swift in Sources */,
 				AE9D56DF25C1BB6800E006E2 /* CatalogDataSource.swift in Sources */,
 				AE9D56EA25C1BD2900E006E2 /* CatalogAssembly.swift in Sources */,
 				AE9D572125C1E53500E006E2 /* RealmProduct.swift in Sources */,

@@ -15,7 +15,7 @@ class ProductsServiceContainer: Containerable {
     
     func register() {
         rootContainer.register(ProductService.self) { (resolver) -> ProductService in
-            return ProductsServiceImplementation()
+            return ProductsServiceImplementation(databaseService: resolver.resolve(DatabaseService.self))
         }.inObjectScope(.container)
     }
 }

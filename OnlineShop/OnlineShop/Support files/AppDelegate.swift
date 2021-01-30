@@ -12,10 +12,10 @@ import Firebase
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
-
+    let databaseService: DatabaseService = DatabaseServiceImplementation()
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
-        DatabaseManager.shared.configure()
+        databaseService.configure()
         return true
     }
 

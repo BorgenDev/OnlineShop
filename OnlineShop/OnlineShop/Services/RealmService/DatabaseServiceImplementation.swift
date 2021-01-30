@@ -8,10 +8,8 @@
 import Foundation
 import RealmSwift
 
-class DatabaseManager {
-    private init() {}
-    static let shared = DatabaseManager()
-    
+class DatabaseServiceImplementation: DatabaseService {
+
     private lazy var realm = try! Realm()
     
     func add(_ objects: [Object]) {
