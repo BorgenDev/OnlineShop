@@ -16,8 +16,11 @@ class ContainerController {
     
     func setupe() {
         let containers: [Containerable] = [
+            
+            ProductsServiceContainer(mainContainer: mainContainer),
+            CartServiceContainer(mainContainer: mainContainer),
+            CartContainer(mainContainer: mainContainer),
             CatalogContainer(mainContainer: mainContainer),
-            ProductsServiceContainer(mainContainer: mainContainer)
         ]
         mainContainer.register(containers: containers)
     }
