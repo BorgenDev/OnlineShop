@@ -9,14 +9,16 @@ import Foundation
 
 class CartInteractor {
     weak var presenter: CartPresenter?
-    private let service: ProductService
+    private var productService: ProductService?
+    private var cartService: CartService?
     
-    init(service: ProductService) {
-        self.service = service
+    init(productService: ProductService?, cartService: CartService?) {
+        self.productService = productService
+        self.cartService = cartService
     }
     
     func fetchProducts() {
-        let products = CartManager.shared.fetchProducts()
+        let products = cartService?.fetchProducts() ?? []
         self.presenter?.didFetchProducts(products)
     }
 }
