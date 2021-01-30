@@ -6,8 +6,16 @@
 //
 
 import Foundation
+import Swinject
 
 protocol Containerable {
+    var mainContainer: MainContainer { get }
     init(mainContainer: MainContainer)
     func register()
+}
+
+extension Containerable {
+    var rootContainer: Container {
+        return mainContainer.rootContainer
+    }
 }
