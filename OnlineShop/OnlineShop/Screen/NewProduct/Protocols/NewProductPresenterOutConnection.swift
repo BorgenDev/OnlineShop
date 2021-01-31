@@ -8,5 +8,5 @@
 import Foundation
 
 protocol NewProductPresenterOutConnection: class {
-    
+    func getProduct(product: Product) -> Void
 }

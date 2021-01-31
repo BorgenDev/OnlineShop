@@ -12,8 +12,9 @@ class NewProductPresenter: NewProductViewOutConnection, NewProductPresenterInCon
     weak var view: NewProductViewInConnection?
     var interactor: NewProductPresenterOutConnection?
     
-    func getInformationAdoutProduct(name: String?, price: Int?, raiting: Int?) {
-        
+    func getInformationAdoutProduct(name: String?, price: Double?, raiting: Float?) {
+        let product = Product(name: name, price: price, rating: raiting, imageUrl: "")
+        interactor?.getProduct(product: product)
     }
     
     func viewDidLoad() {

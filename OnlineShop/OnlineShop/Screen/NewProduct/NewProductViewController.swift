@@ -50,8 +50,8 @@ class NewProductViewController: UIViewController, NewProductViewInConnection {
         }
         
         let name: String? = nameTF.text
-        let price: Int? = Int(priceTF.text ?? "")
-        let raiting: Int? = Int(raitingStepper.value)
+        let price: Double? = Double(priceTF.text ?? "")
+        let raiting: Float? = Float(raitingStepper.value)
         
         presenter?.getInformationAdoutProduct(name: name, price: price, raiting: raiting)
     }
@@ -112,6 +112,13 @@ class NewProductViewController: UIViewController, NewProductViewInConnection {
     
     @objc func imageViewDidTap() {
         self.showImagePicerAlert()
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        
+        self.view.endEditing(true)
+        
     }
     
 }

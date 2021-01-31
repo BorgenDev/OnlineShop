@@ -9,4 +9,10 @@ import Foundation
 
 class NewProductInteractor: NewProductPresenterOutConnection {
     weak var presenter: NewProductPresenterInConnection?
+    
+    func getProduct(product: Product) {
+        FirebaseHandler(product)
+            .auto()
+            .setValue()
+    }
 }

@@ -9,5 +9,5 @@ import Foundation
 
 protocol NewProductViewOutConnection: class {
     func viewDidLoad()
-    func getInformationAdoutProduct(name: String?, price: Int?, raiting: Int?)
+    func getInformationAdoutProduct(name: String?, price: Double?, raiting: Float?)
 }
