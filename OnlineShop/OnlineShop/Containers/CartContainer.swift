@@ -30,10 +30,7 @@ class CartContainer: Containerable {
         }
         
         rootContainer.register(CartInteractor.self) { (resolver) -> CartInteractor in
-            let interactor = CartInteractor(productService: resolver
-                                                .resolve(ProductService.self),
-                                            cartService: resolver
-                                                .resolve(CartService.self))
+            let interactor = CartInteractor(cartService: resolver.resolve(CartService.self))
             return interactor
         }.initCompleted { (resolver, interactor) in
             interactor.presenter = resolver.resolve(CartPresenter.self)

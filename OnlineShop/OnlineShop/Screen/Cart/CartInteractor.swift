@@ -9,12 +9,14 @@ import Foundation
 
 class CartInteractor {
     weak var presenter: CartPresenter?
-    private var productService: ProductService?
     private var cartService: CartService?
     
-    init(productService: ProductService?, cartService: CartService?) {
-        self.productService = productService
+    init(cartService: CartService?) {
         self.cartService = cartService
+    }
+    
+    func removeProductFromCart(_ product: Product) {
+        cartService?.remove(product: product)
     }
     
     func fetchProducts() {

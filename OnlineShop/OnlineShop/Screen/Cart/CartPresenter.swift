@@ -16,6 +16,9 @@ class CartPresenter {
     
     func didFetchProducts(_ products: [Product]) {
         dataSource.load(products: products)
+        dataSource.productShouldBeRemoved = { [weak self] product in
+            self?.interactor?.removeProductFromCart(product)
+        }
         view?.reloadTableView()
     }
     

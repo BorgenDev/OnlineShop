@@ -9,8 +9,10 @@ import Foundation
 import RealmSwift
 
 class CartServiceImplementation: CartService {
-    
+        
     private var databaseService: DatabaseService?
+    lazy var carts: [RealmCard] = databaseService?.fetch() ?? []
+
     
     init(databaseService: DatabaseService?) {
         self.databaseService = databaseService
@@ -19,7 +21,6 @@ class CartServiceImplementation: CartService {
     var productsCountUpdated: ((Int) -> Void)?
     
     func fetchProducts() -> [Product] {
-        let carts: [RealmCard] = databaseService?.fetch() ?? []
         let cart = carts.first
         let productsIds = Array(cart?.productIds ?? List())
         let products: [RealmProduct] = databaseService?.fetch() ?? []
@@ -29,7 +30,6 @@ class CartServiceImplementation: CartService {
     }
     
     func add(product: Product) {
-        let carts: [RealmCard] = databaseService?.fetch() ?? []
         let emptyCart = RealmCard()
         emptyCart.sessionID = UUID().uuidString
         let cart = carts.first ?? emptyCart
@@ -37,8 +37,30 @@ class CartServiceImplementation: CartService {
             cart.productIds.append(product.name ?? "")
         }
         databaseService?.add(cart)
-        let filteredProducts = self.fetchProducts()
         
-        productsCountUpdated?(filteredProducts.count)
+        let countOfProduct = self.fetchProducts()
+        productsCountUpdated?(countOfProduct.count)
     }
+    
+    func remove(product: Product) {
+        let cart = carts.first
+        let productsIds = Array(cart?.productIds ?? List())
+        guard let name = product.name, productsIds.contains(name) else {
+            return
+        }
+        guard let indexOfProduct = productsIds.firstIndex(of: name) else {
+            return
+        }
+        
+        let index = Int(indexOfProduct)
+        databaseService?.write {
+            cart?.productIds.remove(at: index)
+        }
+        let countOfProduct = self.fetchProducts()
+        productsCountUpdated?(countOfProduct.count)
+    }
+    
+    
+    
+
 }

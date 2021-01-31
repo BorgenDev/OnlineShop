@@ -19,7 +19,7 @@ class DatabaseServiceImplementation: DatabaseService {
     }
     
     func add(_ objects: Object) {
-        write {
+        try! realm.write {
             self.realm.add(objects, update: .all)
         }
     }
@@ -29,10 +29,12 @@ class DatabaseServiceImplementation: DatabaseService {
     }
     
     func delete(_ object: Object) {
-        try! realm.write {
+        write {
+            self.realm.add(object, update: .all)
             self.realm.delete(object)
         }
     }
+    
     
     func write(_ clouser: (() -> Void)?) {
         try! realm.write {
