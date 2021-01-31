@@ -8,16 +8,16 @@
 import Foundation
 import UIKit
 
-class CartPresenter {
-    weak var view: CartViewController?
-    var interactor: CartInteractor?
+class CartPresenter: CartViewOutConnection, CartPresenterInConnection {
+    weak var view: CartViewInConnection?
+    var interactor: CartPresenterOutConnection?
     
     private let dataSource = CartDataSource()
     
     func didFetchProducts(_ products: [Product]) {
         dataSource.load(products: products)
         dataSource.productShouldBeRemoved = { [weak self] product in
-            self?.interactor?.removeProductFromCart(product)
+            self?.interactor?.removeProductFromCart(product: product)
         }
         view?.reloadTableView()
     }

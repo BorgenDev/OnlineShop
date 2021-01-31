@@ -18,16 +18,19 @@ class CatalogContainer: Containerable {
     func register() {
         rootContainer.register(CatalogViewController.self) { (resolver) -> CatalogViewController in
             let viewController = CatalogViewController()
-            viewController.presenter = resolver.resolve(CatalogPresenter.self)
+            viewController.presenter = resolver.resolve(CatalogViewOutConnection.self)
             return viewController
-        }
+        }.implements(CatalogViewInConnection.self)
         
         rootContainer.register(CatalogPresenter.self) { (resolver) -> CatalogPresenter in
             let presenter = CatalogPresenter()
-            presenter.interactor = resolver.resolve(CatalogInteractor.self)
+            presenter.interactor = resolver.resolve(CatalogPresenterOutConnection.self)
             return presenter
-        }.initCompleted { (resolver, presenter) in
-            presenter.view = resolver.resolve(CatalogViewController.self)
+        }
+        .implements(CatalogViewOutConnection.self)
+        .implements(CatalogPresenterInConnection.self)
+        .initCompleted { (resolver, presenter) in
+            presenter.view = resolver.resolve(CatalogViewInConnection.self)
         }
         
         rootContainer.register(CatalogInteractor.self) { (resolver) -> CatalogInteractor in
@@ -36,8 +39,10 @@ class CatalogContainer: Containerable {
                                                cartService: resolver
                                                 .resolve(CartService.self))
             return interactor
-        }.initCompleted { (resolver, interactor) in
-            interactor.presenter = resolver.resolve(CatalogPresenter.self)
+        }
+        .implements(CatalogPresenterOutConnection.self)
+        .initCompleted { (resolver, interactor) in
+            interactor.presenter = resolver.resolve(CatalogPresenterInConnection.self)
         }
     }
 }

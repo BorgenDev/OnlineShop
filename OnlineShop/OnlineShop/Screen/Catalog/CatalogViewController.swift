@@ -7,10 +7,10 @@
 
 import UIKit
 
-class CatalogViewController: UIViewController {
+class CatalogViewController: UIViewController, CatalogViewInConnection {
     
     @IBOutlet private weak var collectionView: UICollectionView!
-    var presenter: CatalogPresenter?
+    var presenter: CatalogViewOutConnection?
 
     override func viewDidLoad() {
         super.viewDidLoad()

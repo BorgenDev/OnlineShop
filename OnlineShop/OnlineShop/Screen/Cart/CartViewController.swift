@@ -7,9 +7,9 @@
 
 import UIKit
 
-class CartViewController: UIViewController {
+class CartViewController: UIViewController, CartViewInConnection {
     
-    var presenter: CartPresenter?
+    var presenter: CartViewOutConnection?
     
     @IBOutlet private weak var tableView: UITableView!
 

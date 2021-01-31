@@ -8,9 +8,9 @@
 import Foundation
 import UIKit
 
-class CatalogPresenter {
-    weak var view: CatalogViewController?
-    var interactor: CatalogInteractor?
+class CatalogPresenter: CatalogViewOutConnection, CatalogPresenterInConnection {
+    weak var view: CatalogViewInConnection?
+    var interactor: CatalogPresenterOutConnection?
     
     private let dataSource: CatalogDataSource = .init()
     
@@ -18,7 +18,7 @@ class CatalogPresenter {
         let filtredProducts = filteringProductsByPrice(products)
         dataSource.load(products: filtredProducts)
         dataSource.productShouldBeAddedToCart = { [weak self] product in
-            self?.interactor?.addProductToCart(product)
+            self?.interactor?.addProductToCart(product: product)
         }
         view?.reloadView()
     }

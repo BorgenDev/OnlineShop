@@ -7,8 +7,8 @@
 
 import Foundation
 
-class CatalogInteractor {
-    weak var presenter: CatalogPresenter?
+class CatalogInteractor: CatalogPresenterOutConnection {
+    weak var presenter: CatalogPresenterInConnection?
     private let productService: ProductService?
     private var cartService: CartService?
     
@@ -17,7 +17,7 @@ class CatalogInteractor {
         self.cartService = cartService
     }
     
-    func addProductToCart(_ product: Product) {
+    func addProductToCart(product: Product) {
         cartService?.add(product: product)
     }
     

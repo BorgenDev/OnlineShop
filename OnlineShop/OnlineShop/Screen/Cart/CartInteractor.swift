@@ -7,15 +7,15 @@
 
 import Foundation
 
-class CartInteractor {
-    weak var presenter: CartPresenter?
+class CartInteractor: CartPresenterOutConnection {
+    weak var presenter: CartPresenterInConnection?
     private var cartService: CartService?
     
     init(cartService: CartService?) {
         self.cartService = cartService
     }
     
-    func removeProductFromCart(_ product: Product) {
+    func removeProductFromCart(product: Product) {
         cartService?.remove(product: product)
     }
     
