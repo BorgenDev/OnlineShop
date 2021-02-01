@@ -12,7 +12,7 @@ class NewProductViewController: UIViewController, NewProductViewInConnection {
     var presenter: NewProductViewOutConnection?
     
     //MARK: - IBOutlet
-
+    
     @IBOutlet weak var productImageView: UIImageView!
     @IBOutlet weak var nameTF: UITextField!
     @IBOutlet weak var priceTF: UITextField!
@@ -21,7 +21,7 @@ class NewProductViewController: UIViewController, NewProductViewInConnection {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-                
+        
         self.title = "Добавить продукт"
         navigationController?.navigationBar.prefersLargeTitles = true
         
@@ -36,7 +36,7 @@ class NewProductViewController: UIViewController, NewProductViewInConnection {
         super.viewWillAppear(animated)
         self.productImageView.layer.cornerRadius = 20
     }
-   
+    
     //MARK: - IBAction
     
     @IBAction func raitingDidChange(_ sender: UIStepper) {
@@ -55,6 +55,14 @@ class NewProductViewController: UIViewController, NewProductViewInConnection {
         
         presenter?.getInformationAdoutProduct(name: name, price: price, raiting: raiting)
     }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        
+        self.view.endEditing(true)
+    }
+    
+    //MARK: - Methods
     
     private func showErrorAlert() {
         let alertController = UIAlertController(title: "Error", message: "Fill in all the fields", preferredStyle: .alert)
@@ -112,13 +120,6 @@ class NewProductViewController: UIViewController, NewProductViewInConnection {
     
     @objc func imageViewDidTap() {
         self.showImagePicerAlert()
-    }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        super.touchesBegan(touches, with: event)
-        
-        self.view.endEditing(true)
-        
     }
     
 }

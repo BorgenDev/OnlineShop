@@ -44,6 +44,18 @@
 		AE87E19D25C6D4B60008D686 /* NewProductPresenterInConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE87E19C25C6D4B60008D686 /* NewProductPresenterInConnection.swift */; };
 		AE87E1A325C6E98F0008D686 /* NewProductContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE87E1A225C6E98F0008D686 /* NewProductContainer.swift */; };
 		AE87E1A825C6EAAD0008D686 /* NewProductAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE87E1A725C6EAAD0008D686 /* NewProductAssembly.swift */; };
+		AE87E1B525C735980008D686 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE87E1B325C735980008D686 /* SettingsViewController.swift */; };
+		AE87E1B625C735980008D686 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE87E1B425C735980008D686 /* SettingsViewController.xib */; };
+		AE87E1BB25C735AF0008D686 /* SettingsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE87E1BA25C735AF0008D686 /* SettingsPresenter.swift */; };
+		AE87E1C225C735CF0008D686 /* SettingsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE87E1C125C735CF0008D686 /* SettingsInteractor.swift */; };
+		AE87E1CA25C736460008D686 /* SettingsViewInConnectuin.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE87E1C925C736460008D686 /* SettingsViewInConnectuin.swift */; };
+		AE87E1CF25C7366E0008D686 /* SettingsViewOutConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE87E1CE25C7366E0008D686 /* SettingsViewOutConnection.swift */; };
+		AE87E1D425C736830008D686 /* SettingsPresenterInConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE87E1D325C736830008D686 /* SettingsPresenterInConnection.swift */; };
+		AE87E1D925C736A50008D686 /* SettingsPresenterOutConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE87E1D825C736A50008D686 /* SettingsPresenterOutConnection.swift */; };
+		AE87E1DE25C738460008D686 /* SettingsContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE87E1DD25C738460008D686 /* SettingsContainer.swift */; };
+		AE87E1E325C739670008D686 /* SettingsAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE87E1E225C739670008D686 /* SettingsAssembly.swift */; };
+		AE87E1FB25C74F500008D686 /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE87E1F925C74F500008D686 /* SettingsTableViewCell.swift */; };
+		AE87E1FC25C74F500008D686 /* SettingsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE87E1FA25C74F500008D686 /* SettingsTableViewCell.xib */; };
 		AE9D564025C1AED400E006E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9D563F25C1AED400E006E2 /* AppDelegate.swift */; };
 		AE9D564225C1AED400E006E2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9D564125C1AED400E006E2 /* SceneDelegate.swift */; };
 		AE9D564925C1AED600E006E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE9D564825C1AED600E006E2 /* Assets.xcassets */; };
@@ -132,6 +144,18 @@
 		AE87E19C25C6D4B60008D686 /* NewProductPresenterInConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewProductPresenterInConnection.swift; sourceTree = "<group>"; };
 		AE87E1A225C6E98F0008D686 /* NewProductContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewProductContainer.swift; sourceTree = "<group>"; };
 		AE87E1A725C6EAAD0008D686 /* NewProductAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewProductAssembly.swift; sourceTree = "<group>"; };
+		AE87E1B325C735980008D686 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		AE87E1B425C735980008D686 /* SettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
+		AE87E1BA25C735AF0008D686 /* SettingsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPresenter.swift; sourceTree = "<group>"; };
+		AE87E1C125C735CF0008D686 /* SettingsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsInteractor.swift; sourceTree = "<group>"; };
+		AE87E1C925C736460008D686 /* SettingsViewInConnectuin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewInConnectuin.swift; sourceTree = "<group>"; };
+		AE87E1CE25C7366E0008D686 /* SettingsViewOutConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewOutConnection.swift; sourceTree = "<group>"; };
+		AE87E1D325C736830008D686 /* SettingsPresenterInConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPresenterInConnection.swift; sourceTree = "<group>"; };
+		AE87E1D825C736A50008D686 /* SettingsPresenterOutConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPresenterOutConnection.swift; sourceTree = "<group>"; };
+		AE87E1DD25C738460008D686 /* SettingsContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsContainer.swift; sourceTree = "<group>"; };
+		AE87E1E225C739670008D686 /* SettingsAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsAssembly.swift; sourceTree = "<group>"; };
+		AE87E1F925C74F500008D686 /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
+		AE87E1FA25C74F500008D686 /* SettingsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsTableViewCell.xib; sourceTree = "<group>"; };
 		AE9D563C25C1AED400E006E2 /* OnlineShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnlineShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE9D563F25C1AED400E006E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AE9D564125C1AED400E006E2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -232,6 +256,7 @@
 				AE3D8E2C25C5B77400BD8D4F /* CartContainer.swift */,
 				AE3D8E5925C5E06000BD8D4F /* DatabaseServiceContainer.swift */,
 				AE87E1A225C6E98F0008D686 /* NewProductContainer.swift */,
+				AE87E1DD25C738460008D686 /* SettingsContainer.swift */,
 			);
 			path = Containers;
 			sourceTree = "<group>";
@@ -314,6 +339,47 @@
 				AE87E19C25C6D4B60008D686 /* NewProductPresenterInConnection.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		AE87E1B225C735180008D686 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				AE87E1BF25C735B30008D686 /* Protocols */,
+				AE87E1B325C735980008D686 /* SettingsViewController.swift */,
+				AE87E1B425C735980008D686 /* SettingsViewController.xib */,
+				AE87E1BA25C735AF0008D686 /* SettingsPresenter.swift */,
+				AE87E1C125C735CF0008D686 /* SettingsInteractor.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		AE87E1BF25C735B30008D686 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				AE87E1C925C736460008D686 /* SettingsViewInConnectuin.swift */,
+				AE87E1CE25C7366E0008D686 /* SettingsViewOutConnection.swift */,
+				AE87E1D325C736830008D686 /* SettingsPresenterInConnection.swift */,
+				AE87E1D825C736A50008D686 /* SettingsPresenterOutConnection.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		AE87E1E725C7496F0008D686 /* Cart */ = {
+			isa = PBXGroup;
+			children = (
+				AE9D573425C2F31800E006E2 /* CartTableViewCell.swift */,
+				AE9D573525C2F31800E006E2 /* CartTableViewCell.xib */,
+			);
+			path = Cart;
+			sourceTree = "<group>";
+		};
+		AE87E1EB25C749760008D686 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				AE87E1F925C74F500008D686 /* SettingsTableViewCell.swift */,
+				AE87E1FA25C74F500008D686 /* SettingsTableViewCell.xib */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 		AE9D563325C1AED400E006E2 = {
@@ -418,6 +484,7 @@
 		AE9D56B325C1B3B700E006E2 /* Screen */ = {
 			isa = PBXGroup;
 			children = (
+				AE87E1B225C735180008D686 /* Settings */,
 				AE87E17A25C6D3B30008D686 /* NewProduct */,
 				AE9D572B25C2EFF500E006E2 /* Cart */,
 				AE9D56B425C1B3C200E006E2 /* Catalog */,
@@ -495,6 +562,7 @@
 				AE9D56E925C1BD2900E006E2 /* CatalogAssembly.swift */,
 				AE33F20925C31D9F0078FAFB /* CartAssembly.swift */,
 				AE87E1A725C6EAAD0008D686 /* NewProductAssembly.swift */,
+				AE87E1E225C739670008D686 /* SettingsAssembly.swift */,
 			);
 			path = Assembly;
 			sourceTree = "<group>";
@@ -524,8 +592,8 @@
 		AE9D573325C2F09900E006E2 /* TableView */ = {
 			isa = PBXGroup;
 			children = (
-				AE9D573425C2F31800E006E2 /* CartTableViewCell.swift */,
-				AE9D573525C2F31800E006E2 /* CartTableViewCell.xib */,
+				AE87E1EB25C749760008D686 /* Settings */,
+				AE87E1E725C7496F0008D686 /* Cart */,
 			);
 			path = TableView;
 			sourceTree = "<group>";
@@ -639,12 +707,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE9D56C525C1B3FE00E006E2 /* CatalogViewController.xib in Resources */,
+				AE87E1B625C735980008D686 /* SettingsViewController.xib in Resources */,
 				AE9D564C25C1AED600E006E2 /* LaunchScreen.storyboard in Resources */,
 				AE9D573725C2F31800E006E2 /* CartTableViewCell.xib in Resources */,
 				AE9D56D025C1B57200E006E2 /* ProductCollectionViewCell.xib in Resources */,
 				AE9D569125C1B0D700E006E2 /* GoogleService-Info.plist in Resources */,
 				AE9D572F25C2F05B00E006E2 /* CartViewController.xib in Resources */,
 				AE9D564925C1AED600E006E2 /* Assets.xcassets in Resources */,
+				AE87E1FC25C74F500008D686 /* SettingsTableViewCell.xib in Resources */,
 				AE87E17F25C6D3F90008D686 /* NewProductViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -783,12 +853,15 @@
 				AE87E18425C6D4100008D686 /* NewProductPresenter.swift in Sources */,
 				AE87E19D25C6D4B60008D686 /* NewProductPresenterInConnection.swift in Sources */,
 				AE87E16425C66FE00008D686 /* CatalogViewOutConnection.swift in Sources */,
+				AE87E1CA25C736460008D686 /* SettingsViewInConnectuin.swift in Sources */,
 				AE9D571C25C1E37500E006E2 /* ProductsServiceImplementation.swift in Sources */,
 				AE9D564025C1AED400E006E2 /* AppDelegate.swift in Sources */,
 				AE87E17625C670470008D686 /* CatalogPresenterOutConnection.swift in Sources */,
 				AE87E19325C6D4840008D686 /* NewProductPresenterOutConnection.swift in Sources */,
+				AE87E1CF25C7366E0008D686 /* SettingsViewOutConnection.swift in Sources */,
 				AE87E17E25C6D3F90008D686 /* NewProductViewController.swift in Sources */,
 				AE9D569A25C1B18400E006E2 /* FirebaseHandler.swift in Sources */,
+				AE87E1DE25C738460008D686 /* SettingsContainer.swift in Sources */,
 				AE3D8E5A25C5E06000BD8D4F /* DatabaseServiceContainer.swift in Sources */,
 				AE87E16C25C6700D0008D686 /* CatalogViewInConnection.swift in Sources */,
 				AE3D8E2D25C5B77400BD8D4F /* CartContainer.swift in Sources */,
@@ -801,8 +874,10 @@
 				AE87E14525C66B1F0008D686 /* CartViewInConnection.swift in Sources */,
 				AE9D56EA25C1BD2900E006E2 /* CatalogAssembly.swift in Sources */,
 				AE9D572125C1E53500E006E2 /* RealmProduct.swift in Sources */,
+				AE87E1E325C739670008D686 /* SettingsAssembly.swift in Sources */,
 				AE9D56A325C1B1CA00E006E2 /* Codable+Dictionary.swift in Sources */,
 				AE9D56BE25C1B3E300E006E2 /* CatalogPresenter.swift in Sources */,
+				AE87E1FB25C74F500008D686 /* SettingsTableViewCell.swift in Sources */,
 				AE87E1A825C6EAAD0008D686 /* NewProductAssembly.swift in Sources */,
 				AE9D573625C2F31800E006E2 /* CartTableViewCell.swift in Sources */,
 				AE87E18E25C6D46D0008D686 /* NewProductViewInConnection.swift in Sources */,
@@ -811,11 +886,15 @@
 				AE3D8E1F25C5B38E00BD8D4F /* CartService.swift in Sources */,
 				AE9D56CF25C1B57200E006E2 /* ProductCollectionViewCell.swift in Sources */,
 				AE9D564225C1AED400E006E2 /* SceneDelegate.swift in Sources */,
+				AE87E1C225C735CF0008D686 /* SettingsInteractor.swift in Sources */,
 				AE87E19825C6D49B0008D686 /* NewProductViewOutConnection.swift in Sources */,
 				AE3D8DF425C59B7000BD8D4F /* CatalogContainer.swift in Sources */,
 				AE33F1EE25C2F9490078FAFB /* CartPresenter.swift in Sources */,
+				AE87E1BB25C735AF0008D686 /* SettingsPresenter.swift in Sources */,
 				AE9D56E425C1BBDA00E006E2 /* CatalogLayoutCalculator.swift in Sources */,
+				AE87E1D425C736830008D686 /* SettingsPresenterInConnection.swift in Sources */,
 				AE87E17125C670350008D686 /* CatalogPresenterInConnection.swift in Sources */,
+				AE87E1B525C735980008D686 /* SettingsViewController.swift in Sources */,
 				AE3D8DEC25C59A9200BD8D4F /* MainContainer.swift in Sources */,
 				AE9D572E25C2F05B00E006E2 /* CartViewController.swift in Sources */,
 				AE87E18925C6D43C0008D686 /* NewProductInteractor.swift in Sources */,
@@ -825,6 +904,7 @@
 				AE3D8E0425C5AB4C00BD8D4F /* ContainersController.swift in Sources */,
 				AE9D571425C1E2F400E006E2 /* ProductService.swift in Sources */,
 				AE33F1F325C2F9650078FAFB /* CartInteractor.swift in Sources */,
+				AE87E1D925C736A50008D686 /* SettingsPresenterOutConnection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

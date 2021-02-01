@@ -22,7 +22,8 @@ class ContainerController {
             CartContainer(mainContainer: mainContainer),
             NewProductContainer(mainContainer: mainContainer),
             CatalogContainer(mainContainer: mainContainer),
-            DatabaseServiceContainer(mainContainer: mainContainer)
+            DatabaseServiceContainer(mainContainer: mainContainer),
+            SettingsContainer(mainContainer: mainContainer)
             
         ]
         mainContainer.register(containers: containers)

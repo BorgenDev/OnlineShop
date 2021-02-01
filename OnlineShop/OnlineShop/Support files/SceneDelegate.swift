@@ -26,11 +26,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let cartVC = setupeCartScreen()
         let catalogVC = setupeCatalogScreen()
         let newProductVC = setupeNewProductScreen()
+        let settigsVC = setupeSettinsScreen()
+        
         let cartTabBarItem = cartVC.tabBarItem
         self.setupeBadgeValue(cartService: cartService, cartTabBarItem: cartTabBarItem)
         
         let tabBarController = UITabBarController()
-        tabBarController.setViewControllers([catalogVC, cartVC, newProductVC], animated: true)
+        tabBarController.setViewControllers([catalogVC, cartVC, newProductVC, settigsVC], animated: true)
         window?.rootViewController = tabBarController
         window?.makeKeyAndVisible()
     }
@@ -72,6 +74,20 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         catalogNC.tabBarItem = UITabBarItem(title: "Каталог", image: UIImage(systemName: "bag.fill"), tag: 1)
         
         return catalogNC
+        
+    }
+    
+    private func setupeSettinsScreen() -> UINavigationController {
+        let settingsAssembly = SettingsAssembly(container: mainContainer.rootContainer)
+        
+        guard let settingsViewController = settingsAssembly.assembly() else {
+            return UINavigationController()
+        }
+        
+        let settingsNC = UINavigationController(rootViewController: settingsViewController)
+        settingsNC.tabBarItem = UITabBarItem(title: "Каталог", image: UIImage(systemName: "gearshape.fill"), tag: 2)
+        
+        return settingsNC
         
     }
     
