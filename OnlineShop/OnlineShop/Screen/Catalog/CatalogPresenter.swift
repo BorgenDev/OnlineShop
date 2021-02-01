@@ -20,6 +20,7 @@ class CatalogPresenter: CatalogViewOutConnection, CatalogPresenterInConnection {
         dataSource.productShouldBeAddedToCart = { [weak self] product in
             self?.interactor?.addProductToCart(product: product)
         }
+        interactor?.addButtonShouldBeHide()
         view?.reloadView()
     }
 
@@ -30,6 +31,15 @@ class CatalogPresenter: CatalogViewOutConnection, CatalogPresenterInConnection {
     func subscribe(collectionView: UICollectionView) {
         collectionView.dataSource = dataSource
         collectionView.delegate = dataSource
+    }
+    
+    func viewWillAppear() {
+        interactor?.addButtonShouldBeHide()
+        view?.reloadView()
+    }
+    
+    func statusOfAddButtonDidChange(indicator: Bool) {
+        dataSource.buttonShouldBeHideFromScreen?(indicator)
     }
     
     private func filteringProductsByPrice(_ products: [Product]) -> [Product] {

@@ -37,7 +37,8 @@ class CatalogContainer: Containerable {
             let interactor = CatalogInteractor(productService: resolver
                                                 .resolve(ProductService.self),
                                                cartService: resolver
-                                                .resolve(CartService.self))
+                                                .resolve(CartService.self),
+                                               settingsService: resolver.resolve(SettingsService.self))
             return interactor
         }
         .implements(CatalogPresenterOutConnection.self)

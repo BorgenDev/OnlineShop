@@ -11,10 +11,12 @@ class CatalogInteractor: CatalogPresenterOutConnection {
     weak var presenter: CatalogPresenterInConnection?
     private let productService: ProductService?
     private var cartService: CartService?
+    private var settingsService: SettingsService?
     
-    init(productService: ProductService?, cartService: CartService?) {
+    init(productService: ProductService?, cartService: CartService?, settingsService: SettingsService?) {
         self.productService = productService
         self.cartService = cartService
+        self.settingsService = settingsService
     }
     
     func addProductToCart(product: Product) {
@@ -24,6 +26,12 @@ class CatalogInteractor: CatalogPresenterOutConnection {
     func fetchProducts() {
         productService?.fetchProducts { (products) in
             self.presenter?.didFetchProducts(products)
+        }
+    }
+    
+    func addButtonShouldBeHide() {
+        settingsService?.hideCartScreena = { indictator in
+            self.presenter?.statusOfAddButtonDidChange(indicator: indictator)
         }
     }
 }

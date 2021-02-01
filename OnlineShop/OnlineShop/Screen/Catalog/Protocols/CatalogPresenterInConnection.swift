@@ -9,4 +9,5 @@ import Foundation
 
 protocol CatalogPresenterInConnection: class {
     func didFetchProducts(_ products: [Product])
+    func statusOfAddButtonDidChange(indicator: Bool)
 }

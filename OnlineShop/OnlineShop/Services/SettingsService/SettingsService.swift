@@ -9,4 +9,5 @@ import Foundation
 
 protocol SettingsService {
     func hideCartScreen(indicator: Bool)
+    var hideCartScreena: ((Bool) -> Void)? { get set }
 }

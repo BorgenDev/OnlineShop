@@ -18,6 +18,7 @@ class SettingsInteractor: SettingsPresenterOutConnection {
     weak var presenter: SettingsPresenterInConnection?
     
     func removeOrAddScren(indicator: Bool) {
-        
+        settingsService?.hideCartScreen(indicator: indicator)
+        settingsService?.hideCartScreena?(indicator)
     }
 }

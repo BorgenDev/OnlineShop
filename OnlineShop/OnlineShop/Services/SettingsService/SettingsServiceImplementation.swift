@@ -13,4 +13,6 @@ class SettingsServiceImplementation: SettingsService {
         
     }
     
+    var hideCartScreena: ((Bool) -> Void)?
+    
 }

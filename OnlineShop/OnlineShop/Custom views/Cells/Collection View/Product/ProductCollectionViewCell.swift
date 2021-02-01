@@ -17,6 +17,7 @@ class ProductCollectionViewCell: UICollectionViewCell, NibLoadable {
     @IBOutlet private weak var button: UIButton!
 
     var buttonClocked: (() -> Void)?
+
     override func awakeFromNib() {
         super.awakeFromNib()
         button.layer.cornerRadius = 10
@@ -31,14 +32,17 @@ class ProductCollectionViewCell: UICollectionViewCell, NibLoadable {
         
         priceLabel.minimumScaleFactor = 0.2
         priceLabel.adjustsFontSizeToFitWidth = true
+
         addTargets()
     }
 
-    func configure(by product: Product) {
+    func configure(by product: Product, isButtonHidden: Bool) {
         nameLabel.text = product.name
         priceLabel.text = "\(product.price ?? 0) ₽"
         ratingLabel.text = "Рейтинг продукта: \(product.rating?.rounded() ?? 0)"
         imageView.kf.setImage(with: URL(string: product.imageUrl ?? ""))
+        
+        self.button.isHidden = !isButtonHidden
     }
     
     private func addTargets() {

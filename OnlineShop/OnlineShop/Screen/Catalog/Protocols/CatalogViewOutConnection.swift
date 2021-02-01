@@ -11,4 +11,5 @@ import UIKit
 protocol CatalogViewOutConnection: class {
     func viewLoaded()
     func subscribe(collectionView: UICollectionView)
+    func viewWillAppear()
 }

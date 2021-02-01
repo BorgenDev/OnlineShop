@@ -27,5 +27,11 @@ class CatalogViewController: UIViewController, CatalogViewInConnection {
     func reloadView() {
         collectionView.reloadData()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        presenter?.viewWillAppear()
+        self.reloadView()
+    }
 
 }

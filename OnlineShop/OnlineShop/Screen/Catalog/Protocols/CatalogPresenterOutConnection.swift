@@ -10,4 +10,5 @@ import Foundation
 protocol CatalogPresenterOutConnection: class {
     func addProductToCart(product: Product)
     func fetchProducts()
+    func addButtonShouldBeHide()
 }

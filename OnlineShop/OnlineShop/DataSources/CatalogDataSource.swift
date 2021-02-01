@@ -10,24 +10,31 @@ import UIKit
 class CatalogDataSource: NSObject {
     private let spacing: CGFloat = 16
     private let numberOfColumns = 2
-
-    private(set) var products: [Product] = []
     
+    private(set) var products: [Product] = []
+    private var buttonShouldBeHide = true
+
+    var buttonShouldBeHideFromScreen: ((Bool) -> Void)?
     var productShouldBeAddedToCart: ((Product) -> Void)?
 
     func load(products: [Product]) {
         self.products = products
     }
+    
 }
 
 extension CatalogDataSource: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: ProductCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: ProductCollectionViewCell.nibName, for: indexPath) as! ProductCollectionViewCell
         let product = products[indexPath.row]
-        cell.configure(by: product)
+        buttonShouldBeHideFromScreen = { indicator in
+            self.buttonShouldBeHide = indicator
+        }
+        cell.configure(by: product, isButtonHidden: buttonShouldBeHide)
         cell.buttonClocked = { [weak self] in
             self?.productShouldBeAddedToCart?(product)
         }
+        
         return cell
     }
 

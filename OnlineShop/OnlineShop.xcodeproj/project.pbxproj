@@ -59,6 +59,8 @@
 		AE87E20225C785E50008D686 /* SettingsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE87E20125C785E50008D686 /* SettingsService.swift */; };
 		AE87E20A25C785F70008D686 /* SettingsServiceImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE87E20925C785F70008D686 /* SettingsServiceImplementation.swift */; };
 		AE87E20F25C794960008D686 /* SettingsServiceContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE87E20E25C794960008D686 /* SettingsServiceContainer.swift */; };
+		AE87E21525C79AEC0008D686 /* DefultScreenFactoryImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE87E21425C79AEC0008D686 /* DefultScreenFactoryImplementation.swift */; };
+		AE87E21D25C79B2D0008D686 /* DefultScreenFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE87E21C25C79B2D0008D686 /* DefultScreenFactory.swift */; };
 		AE9D564025C1AED400E006E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9D563F25C1AED400E006E2 /* AppDelegate.swift */; };
 		AE9D564225C1AED400E006E2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9D564125C1AED400E006E2 /* SceneDelegate.swift */; };
 		AE9D564925C1AED600E006E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE9D564825C1AED600E006E2 /* Assets.xcassets */; };
@@ -162,6 +164,8 @@
 		AE87E20125C785E50008D686 /* SettingsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsService.swift; sourceTree = "<group>"; };
 		AE87E20925C785F70008D686 /* SettingsServiceImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsServiceImplementation.swift; sourceTree = "<group>"; };
 		AE87E20E25C794960008D686 /* SettingsServiceContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsServiceContainer.swift; sourceTree = "<group>"; };
+		AE87E21425C79AEC0008D686 /* DefultScreenFactoryImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefultScreenFactoryImplementation.swift; sourceTree = "<group>"; };
+		AE87E21C25C79B2D0008D686 /* DefultScreenFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefultScreenFactory.swift; sourceTree = "<group>"; };
 		AE9D563C25C1AED400E006E2 /* OnlineShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnlineShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE9D563F25C1AED400E006E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AE9D564125C1AED400E006E2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -398,6 +402,15 @@
 			path = SettingsService;
 			sourceTree = "<group>";
 		};
+		AE87E21325C7990C0008D686 /* FactoryMethod */ = {
+			isa = PBXGroup;
+			children = (
+				AE87E21425C79AEC0008D686 /* DefultScreenFactoryImplementation.swift */,
+				AE87E21C25C79B2D0008D686 /* DefultScreenFactory.swift */,
+			);
+			path = FactoryMethod;
+			sourceTree = "<group>";
+		};
 		AE9D563325C1AED400E006E2 = {
 			isa = PBXGroup;
 			children = (
@@ -423,6 +436,7 @@
 		AE9D563E25C1AED400E006E2 /* OnlineShop */ = {
 			isa = PBXGroup;
 			children = (
+				AE87E21325C7990C0008D686 /* FactoryMethod */,
 				AE3D8E0225C5AB1D00BD8D4F /* Controller */,
 				AE3D8DEA25C59A1D00BD8D4F /* Containers */,
 				AE9D571225C1E2E500E006E2 /* Services */,
@@ -860,6 +874,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE87E21525C79AEC0008D686 /* DefultScreenFactoryImplementation.swift in Sources */,
 				AE33F20A25C31D9F0078FAFB /* CartAssembly.swift in Sources */,
 				AE33F1F825C2FA2A0078FAFB /* CartDataSource.swift in Sources */,
 				AE33F20525C307470078FAFB /* CartServiceImplementation.swift in Sources */,
@@ -915,6 +930,7 @@
 				AE87E17125C670350008D686 /* CatalogPresenterInConnection.swift in Sources */,
 				AE87E1B525C735980008D686 /* SettingsViewController.swift in Sources */,
 				AE3D8DEC25C59A9200BD8D4F /* MainContainer.swift in Sources */,
+				AE87E21D25C79B2D0008D686 /* DefultScreenFactory.swift in Sources */,
 				AE9D572E25C2F05B00E006E2 /* CartViewController.swift in Sources */,
 				AE87E20225C785E50008D686 /* SettingsService.swift in Sources */,
 				AE87E18925C6D43C0008D686 /* NewProductInteractor.swift in Sources */,

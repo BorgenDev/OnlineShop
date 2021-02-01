@@ -23,10 +23,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(windowScene: scene)
         
         let cartService = mainContainer.rootContainer.resolve(CartService.self)
+        var settingsService = mainContainer.rootContainer.resolve(SettingsService.self)
+        
         let cartVC = setupeCartScreen()
         let catalogVC = setupeCatalogScreen()
         let newProductVC = setupeNewProductScreen()
         let settigsVC = setupeSettinsScreen()
+        
+        settingsService?.hideCartScreena = { indicator in
+            //print(indicator)
+        }
         
         let cartTabBarItem = cartVC.tabBarItem
         self.setupeBadgeValue(cartService: cartService, cartTabBarItem: cartTabBarItem)
