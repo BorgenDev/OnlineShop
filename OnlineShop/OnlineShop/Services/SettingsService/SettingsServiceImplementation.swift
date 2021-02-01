@@ -9,10 +9,6 @@ import Foundation
 
 class SettingsServiceImplementation: SettingsService {
     
-    func hideCartScreen(indicator: Bool) {
-        
-    }
-    
+    var hideAddButton: ((Bool) -> Void)? 
     var hideCartScreena: ((Bool) -> Void)?
-    
 }

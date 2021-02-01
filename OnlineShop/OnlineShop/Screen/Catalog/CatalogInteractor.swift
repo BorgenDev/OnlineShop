@@ -30,7 +30,7 @@ class CatalogInteractor: CatalogPresenterOutConnection {
     }
     
     func addButtonShouldBeHide() {
-        settingsService?.hideCartScreena = { indictator in
+        settingsService?.hideAddButton = { indictator in
             self.presenter?.statusOfAddButtonDidChange(indicator: indictator)
         }
     }

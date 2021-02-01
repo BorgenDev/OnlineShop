@@ -9,7 +9,7 @@ import Foundation
 
 class SettingsInteractor: SettingsPresenterOutConnection {
     
-    private let settingsService: SettingsService?
+    private var settingsService: SettingsService?
     
     init(settingsService: SettingsService?) {
         self.settingsService = settingsService
@@ -18,7 +18,7 @@ class SettingsInteractor: SettingsPresenterOutConnection {
     weak var presenter: SettingsPresenterInConnection?
     
     func removeOrAddScren(indicator: Bool) {
-        settingsService?.hideCartScreen(indicator: indicator)
         settingsService?.hideCartScreena?(indicator)
+        settingsService?.hideAddButton?(indicator)
     }
 }

@@ -24,7 +24,8 @@ class ContainerController {
             CatalogContainer(mainContainer: mainContainer),
             DatabaseServiceContainer(mainContainer: mainContainer),
             SettingsContainer(mainContainer: mainContainer),
-            SettingsServiceContainer(mainContainer: mainContainer)
+            SettingsServiceContainer(mainContainer: mainContainer),
+            FactoryScreenContainer(mainContainer: mainContainer)
             
         ]
         mainContainer.register(containers: containers)

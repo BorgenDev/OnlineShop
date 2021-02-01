@@ -12,6 +12,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
     
     let mainContainer = MainContainer()
+    var ggg = true
     private lazy var containersController = ContainerController(mainContainer: mainContainer)
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
@@ -23,24 +24,40 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(windowScene: scene)
         
         let cartService = mainContainer.rootContainer.resolve(CartService.self)
-        var settingsService = mainContainer.rootContainer.resolve(SettingsService.self)
+        let settingsService = mainContainer.rootContainer.resolve(SettingsService.self)
+        let factory = mainContainer.rootContainer.resolve(DefultScreenFactory.self)
+
+        let cartScreen = factory?.setupeScreen(screen: .cart)
+        let catalogScreen = factory?.setupeScreen(screen: .catalog)
+        let settingsScreen = factory?.setupeScreen(screen: .settings)
+        let newProductScreen = factory?.setupeScreen(screen: .newProduct)
         
-        let cartVC = setupeCartScreen()
-        let catalogVC = setupeCatalogScreen()
-        let newProductVC = setupeNewProductScreen()
-        let settigsVC = setupeSettinsScreen()
-        
-        settingsService?.hideCartScreena = { indicator in
-            //print(indicator)
-        }
-        
-        let cartTabBarItem = cartVC.tabBarItem
+        let screenArray: [UINavigationController?] = [catalogScreen, cartScreen, settingsScreen, newProductScreen]
+        let veriflyArray = screenArray.compactMap{ $0 }
+    
+        let tabBarController = setupeTabBarController(cartScreen: cartScreen, cartService: cartService, settingsService: settingsService, controllersArray: veriflyArray)
+
+        window?.rootViewController = tabBarController
+        window?.makeKeyAndVisible()
+    }
+    
+    fileprivate func setupeTabBarController(cartScreen: UINavigationController?, cartService: CartService?, settingsService: SettingsService?, controllersArray: [UINavigationController]) -> UITabBarController {
+        let cartTabBarItem = cartScreen?.tabBarItem
         self.setupeBadgeValue(cartService: cartService, cartTabBarItem: cartTabBarItem)
         
         let tabBarController = UITabBarController()
-        tabBarController.setViewControllers([catalogVC, cartVC, newProductVC, settigsVC], animated: true)
-        window?.rootViewController = tabBarController
-        window?.makeKeyAndVisible()
+        tabBarController.setViewControllers(controllersArray, animated: true)
+        var localSettingsService = settingsService
+        
+        localSettingsService?.hideCartScreena = { indicator in
+            if indicator {
+                tabBarController.viewControllers?.insert(cartScreen ?? UINavigationController(), at: 1)
+            } else {
+                tabBarController.viewControllers?.remove(at: 1)
+            }
+        }
+        
+        return tabBarController
     }
     
     private func setupeBadgeValue(cartService: CartService?, cartTabBarItem: UITabBarItem?) {
@@ -56,60 +73,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         }
     }
     
-    private func setupeCartScreen() -> UINavigationController {
-        let cartAssembly = CartAssembly(container: mainContainer.rootContainer)
-        
-        guard let cartViewController = cartAssembly.assembly() else {
-            return UINavigationController()
-        }
-        
-        let cartNC = UINavigationController(rootViewController: cartViewController)
-        cartNC.tabBarItem = UITabBarItem(title: "Корзина", image: UIImage(systemName: "cart.fill"), tag: 0)
-        
-        return cartNC
-    }
-    
-    private func setupeCatalogScreen() -> UINavigationController {
-        let catalogAssembly = CatalogAssembly(container: mainContainer.rootContainer)
-        
-        guard let catalogViewController = catalogAssembly.assembly() else {
-            return UINavigationController()
-        }
-        
-        let catalogNC = UINavigationController(rootViewController: catalogViewController)
-        catalogNC.tabBarItem = UITabBarItem(title: "Каталог", image: UIImage(systemName: "bag.fill"), tag: 1)
-        
-        return catalogNC
-        
-    }
-    
-    private func setupeSettinsScreen() -> UINavigationController {
-        let settingsAssembly = SettingsAssembly(container: mainContainer.rootContainer)
-        
-        guard let settingsViewController = settingsAssembly.assembly() else {
-            return UINavigationController()
-        }
-        
-        let settingsNC = UINavigationController(rootViewController: settingsViewController)
-        settingsNC.tabBarItem = UITabBarItem(title: "Каталог", image: UIImage(systemName: "gearshape.fill"), tag: 2)
-        
-        return settingsNC
-        
-    }
-    
-    private func setupeNewProductScreen() -> UINavigationController {
-        let newProductAssembly = NewProductAssembly(container: mainContainer.rootContainer)
-        
-        guard let newProductViewController = newProductAssembly.assembly() else {
-            return UINavigationController()
-        }
-        
-        let catalogNC = UINavigationController(rootViewController: newProductViewController)
-        catalogNC.tabBarItem = UITabBarItem(title: "Каталог", image: UIImage(systemName: "plus.circle"), tag: 2)
-        
-        return catalogNC
-        
-    }
+
     
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.
