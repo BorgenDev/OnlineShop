@@ -40,8 +40,8 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: SettingsTableViewCell.nibName, for: indexPath) as! SettingsTableViewCell
-        cell.stateDidChange = { [weak self] bool in
-            print(bool)
+        cell.stateDidChange = { [weak self] indicator in
+            self?.presenter?.databaseStatusDidChange(indicator: indicator)
         }
         
         return cell

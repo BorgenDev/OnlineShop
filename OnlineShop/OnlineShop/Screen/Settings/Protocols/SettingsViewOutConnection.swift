@@ -9,4 +9,5 @@ import Foundation
 
 protocol SettingsViewOutConnection: class {
     func viewDidLoad()
+    func databaseStatusDidChange(indicator: Bool)
 }

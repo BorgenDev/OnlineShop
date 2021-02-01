@@ -56,6 +56,9 @@
 		AE87E1E325C739670008D686 /* SettingsAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE87E1E225C739670008D686 /* SettingsAssembly.swift */; };
 		AE87E1FB25C74F500008D686 /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE87E1F925C74F500008D686 /* SettingsTableViewCell.swift */; };
 		AE87E1FC25C74F500008D686 /* SettingsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE87E1FA25C74F500008D686 /* SettingsTableViewCell.xib */; };
+		AE87E20225C785E50008D686 /* SettingsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE87E20125C785E50008D686 /* SettingsService.swift */; };
+		AE87E20A25C785F70008D686 /* SettingsServiceImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE87E20925C785F70008D686 /* SettingsServiceImplementation.swift */; };
+		AE87E20F25C794960008D686 /* SettingsServiceContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE87E20E25C794960008D686 /* SettingsServiceContainer.swift */; };
 		AE9D564025C1AED400E006E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9D563F25C1AED400E006E2 /* AppDelegate.swift */; };
 		AE9D564225C1AED400E006E2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9D564125C1AED400E006E2 /* SceneDelegate.swift */; };
 		AE9D564925C1AED600E006E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE9D564825C1AED600E006E2 /* Assets.xcassets */; };
@@ -156,6 +159,9 @@
 		AE87E1E225C739670008D686 /* SettingsAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsAssembly.swift; sourceTree = "<group>"; };
 		AE87E1F925C74F500008D686 /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
 		AE87E1FA25C74F500008D686 /* SettingsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsTableViewCell.xib; sourceTree = "<group>"; };
+		AE87E20125C785E50008D686 /* SettingsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsService.swift; sourceTree = "<group>"; };
+		AE87E20925C785F70008D686 /* SettingsServiceImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsServiceImplementation.swift; sourceTree = "<group>"; };
+		AE87E20E25C794960008D686 /* SettingsServiceContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsServiceContainer.swift; sourceTree = "<group>"; };
 		AE9D563C25C1AED400E006E2 /* OnlineShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnlineShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE9D563F25C1AED400E006E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AE9D564125C1AED400E006E2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -254,6 +260,7 @@
 				AE3D8E2725C5B40200BD8D4F /* CartServiceContainer.swift */,
 				AE3D8DF325C59B7000BD8D4F /* CatalogContainer.swift */,
 				AE3D8E2C25C5B77400BD8D4F /* CartContainer.swift */,
+				AE87E20E25C794960008D686 /* SettingsServiceContainer.swift */,
 				AE3D8E5925C5E06000BD8D4F /* DatabaseServiceContainer.swift */,
 				AE87E1A225C6E98F0008D686 /* NewProductContainer.swift */,
 				AE87E1DD25C738460008D686 /* SettingsContainer.swift */,
@@ -380,6 +387,15 @@
 				AE87E1FA25C74F500008D686 /* SettingsTableViewCell.xib */,
 			);
 			path = Settings;
+			sourceTree = "<group>";
+		};
+		AE87E20025C785CD0008D686 /* SettingsService */ = {
+			isa = PBXGroup;
+			children = (
+				AE87E20125C785E50008D686 /* SettingsService.swift */,
+				AE87E20925C785F70008D686 /* SettingsServiceImplementation.swift */,
+			);
+			path = SettingsService;
 			sourceTree = "<group>";
 		};
 		AE9D563325C1AED400E006E2 = {
@@ -570,6 +586,7 @@
 		AE9D571225C1E2E500E006E2 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				AE87E20025C785CD0008D686 /* SettingsService */,
 				AE3D8E4C25C5DE6100BD8D4F /* RealmService */,
 				AE3D8E2325C5B3CB00BD8D4F /* Cart */,
 				AE3D8E1A25C5B35A00BD8D4F /* Products */,
@@ -853,6 +870,7 @@
 				AE87E18425C6D4100008D686 /* NewProductPresenter.swift in Sources */,
 				AE87E19D25C6D4B60008D686 /* NewProductPresenterInConnection.swift in Sources */,
 				AE87E16425C66FE00008D686 /* CatalogViewOutConnection.swift in Sources */,
+				AE87E20F25C794960008D686 /* SettingsServiceContainer.swift in Sources */,
 				AE87E1CA25C736460008D686 /* SettingsViewInConnectuin.swift in Sources */,
 				AE9D571C25C1E37500E006E2 /* ProductsServiceImplementation.swift in Sources */,
 				AE9D564025C1AED400E006E2 /* AppDelegate.swift in Sources */,
@@ -865,6 +883,7 @@
 				AE3D8E5A25C5E06000BD8D4F /* DatabaseServiceContainer.swift in Sources */,
 				AE87E16C25C6700D0008D686 /* CatalogViewInConnection.swift in Sources */,
 				AE3D8E2D25C5B77400BD8D4F /* CartContainer.swift in Sources */,
+				AE87E20A25C785F70008D686 /* SettingsServiceImplementation.swift in Sources */,
 				AE9D56D625C1B89000E006E2 /* NibLoadable.swift in Sources */,
 				AE87E1A325C6E98F0008D686 /* NewProductContainer.swift in Sources */,
 				AE9D56B625C1B3D700E006E2 /* CatalogInteractor.swift in Sources */,
@@ -897,6 +916,7 @@
 				AE87E1B525C735980008D686 /* SettingsViewController.swift in Sources */,
 				AE3D8DEC25C59A9200BD8D4F /* MainContainer.swift in Sources */,
 				AE9D572E25C2F05B00E006E2 /* CartViewController.swift in Sources */,
+				AE87E20225C785E50008D686 /* SettingsService.swift in Sources */,
 				AE87E18925C6D43C0008D686 /* NewProductInteractor.swift in Sources */,
 				AE87E14F25C66B940008D686 /* CartPresenterInConnection.swift in Sources */,
 				AE87E15425C66BC50008D686 /* CartPresenterOutConnection.swift in Sources */,

@@ -34,7 +34,7 @@ class SettingsContainer: Containerable {
         }
         
         rootContainer.register(SettingsInteractor.self) { (resolver) -> SettingsInteractor in
-            let interactor = SettingsInteractor()
+            let interactor = SettingsInteractor(settingsService: resolver.resolve(SettingsService.self))
             return interactor
         }
         .implements(SettingsPresenterOutConnection.self)

@@ -8,5 +8,5 @@
 import Foundation
 
 protocol SettingsPresenterOutConnection: class {
-    
+    func removeOrAddScren(indicator: Bool)
 }

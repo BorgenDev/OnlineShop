@@ -12,8 +12,8 @@ class SettingsTableViewCell: UITableViewCell, NibLoadable {
     var stateDidChange: ((Bool) -> Void)?
     
     @IBAction func switchDidChange(sender: UISwitch) {
-        let target = sender.isOn
-        stateDidChange?(target)
+        let indicator = sender.isOn
+        stateDidChange?(indicator)
     }
     
 }

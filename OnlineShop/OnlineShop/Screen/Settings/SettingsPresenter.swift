@@ -16,4 +16,8 @@ class SettingsPresenter: SettingsViewOutConnection, SettingsPresenterInConnectio
         
     }
     
+    func databaseStatusDidChange(indicator: Bool) {
+        interactor?.removeOrAddScren(indicator: indicator)
+    }
+    
 }

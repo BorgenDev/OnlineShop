@@ -9,5 +9,15 @@ import Foundation
 
 class SettingsInteractor: SettingsPresenterOutConnection {
     
+    private let settingsService: SettingsService?
+    
+    init(settingsService: SettingsService?) {
+        self.settingsService = settingsService
+    }
+
     weak var presenter: SettingsPresenterInConnection?
+    
+    func removeOrAddScren(indicator: Bool) {
+        
+    }
 }
