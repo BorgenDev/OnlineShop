@@ -69,7 +69,7 @@ class DefultScreenFactoryImplementation: DefultScreenFactory {
         }
         
         let settingsNC = UINavigationController(rootViewController: settingsViewController)
-        settingsNC.tabBarItem = UITabBarItem(title: "Каталог", image: UIImage(systemName: "gearshape.fill"), tag: 2)
+        settingsNC.tabBarItem = UITabBarItem(title: "Настройки", image: UIImage(systemName: "gearshape.fill"), tag: 2)
         
         return settingsNC
         
