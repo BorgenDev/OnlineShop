@@ -8,5 +8,6 @@
 import Foundation
 
 protocol CatalogViewInConnection: class {
-    func reloadView() 
+    func reloadView()
+    func showAlert()
 }

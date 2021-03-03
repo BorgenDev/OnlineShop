@@ -6,12 +6,15 @@
 //
 
 import UIKit
+import SystemConfiguration
 
 class CatalogViewController: UIViewController, CatalogViewInConnection {
     
     @IBOutlet private weak var collectionView: UICollectionView!
     var presenter: CatalogViewOutConnection?
-
+    
+    private var internalAlert = InternalAlert(text: "Товар успешно добавлен в корзину!")
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.register(ProductCollectionViewCell.nib, forCellWithReuseIdentifier: ProductCollectionViewCell.nibName)
@@ -28,10 +31,17 @@ class CatalogViewController: UIViewController, CatalogViewInConnection {
         collectionView.reloadData()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        presenter?.viewWillAppear()
-        self.reloadView()
+    func showAlert() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            self.internalAlert = self.internalAlert
+                .animated()
+                .show()
+        }
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+            self.internalAlert = self.internalAlert
+                .hide()
+        }
     }
-
+    
 }

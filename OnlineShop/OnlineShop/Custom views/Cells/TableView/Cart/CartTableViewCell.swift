@@ -20,6 +20,12 @@ class CartTableViewCell: UITableViewCell, NibLoadable {
         productView.contentMode = .scaleAspectFill
         selectionStyle = .none
     }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        
+        productView.image = nil
+    }
 
     func configure(by product: Product) {
         let source = URL(string: product.imageUrl ?? "")

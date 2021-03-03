@@ -16,9 +16,12 @@ class CatalogPresenter: CatalogViewOutConnection, CatalogPresenterInConnection {
     
     func didFetchProducts(_ products: [Product]) {
         let filtredProducts = filteringProductsByPrice(products)
-        dataSource.load(products: filtredProducts)
+        DispatchQueue.main.async {
+            self.dataSource.load(products: filtredProducts)
+        }
         dataSource.productShouldBeAddedToCart = { [weak self] product in
             self?.interactor?.addProductToCart(product: product)
+            self?.view?.showAlert()
         }
         interactor?.addButtonShouldBeHide()
         view?.reloadView()

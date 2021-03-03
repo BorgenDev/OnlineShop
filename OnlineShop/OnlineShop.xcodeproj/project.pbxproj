@@ -80,6 +80,9 @@
 		AE9D572F25C2F05B00E006E2 /* CartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE9D572D25C2F05B00E006E2 /* CartViewController.xib */; };
 		AE9D573625C2F31800E006E2 /* CartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9D573425C2F31800E006E2 /* CartTableViewCell.swift */; };
 		AE9D573725C2F31800E006E2 /* CartTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE9D573525C2F31800E006E2 /* CartTableViewCell.xib */; };
+		AEFF136125EFCA300073608B /* InternalAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFF136025EFCA300073608B /* InternalAlertView.swift */; };
+		AEFF136A25EFCA5E0073608B /* InternalAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEFF136925EFCA5E0073608B /* InternalAlertView.xib */; };
+		AEFF137025EFD8570073608B /* InternalAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFF136F25EFD8570073608B /* InternalAlert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -182,6 +185,9 @@
 		AE9D572D25C2F05B00E006E2 /* CartViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartViewController.xib; sourceTree = "<group>"; };
 		AE9D573425C2F31800E006E2 /* CartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTableViewCell.swift; sourceTree = "<group>"; };
 		AE9D573525C2F31800E006E2 /* CartTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartTableViewCell.xib; sourceTree = "<group>"; };
+		AEFF136025EFCA300073608B /* InternalAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternalAlertView.swift; sourceTree = "<group>"; };
+		AEFF136925EFCA5E0073608B /* InternalAlertView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InternalAlertView.xib; sourceTree = "<group>"; };
+		AEFF136F25EFD8570073608B /* InternalAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternalAlert.swift; sourceTree = "<group>"; };
 		C1A1C4106DC6CA575EF286C8 /* Pods-OnlineShop-OnlineShopUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnlineShop-OnlineShopUITests.release.xcconfig"; path = "Target Support Files/Pods-OnlineShop-OnlineShopUITests/Pods-OnlineShop-OnlineShopUITests.release.xcconfig"; sourceTree = "<group>"; };
 		DADA49929A38755D053743DB /* Pods-OnlineShopTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnlineShopTests.debug.xcconfig"; path = "Target Support Files/Pods-OnlineShopTests/Pods-OnlineShopTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E99EB8F55C70F1674827436C /* Pods-OnlineShop-OnlineShopUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnlineShop-OnlineShopUITests.debug.xcconfig"; path = "Target Support Files/Pods-OnlineShop-OnlineShopUITests/Pods-OnlineShop-OnlineShopUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -495,6 +501,8 @@
 		AE9D56C925C1B50E00E006E2 /* Custom views */ = {
 			isa = PBXGroup;
 			children = (
+				AEFF136E25EFD8420073608B /* Custom Elements */,
+				AEFF136525EFCA440073608B /* Internal Alert */,
 				AE9D56CA25C1B52300E006E2 /* Cells */,
 			);
 			path = "Custom views";
@@ -584,6 +592,23 @@
 				AE87E1E725C7496F0008D686 /* Cart */,
 			);
 			path = TableView;
+			sourceTree = "<group>";
+		};
+		AEFF136525EFCA440073608B /* Internal Alert */ = {
+			isa = PBXGroup;
+			children = (
+				AEFF136025EFCA300073608B /* InternalAlertView.swift */,
+				AEFF136925EFCA5E0073608B /* InternalAlertView.xib */,
+			);
+			path = "Internal Alert";
+			sourceTree = "<group>";
+		};
+		AEFF136E25EFD8420073608B /* Custom Elements */ = {
+			isa = PBXGroup;
+			children = (
+				AEFF136F25EFD8570073608B /* InternalAlert.swift */,
+			);
+			path = "Custom Elements";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -700,6 +725,7 @@
 				AE9D573725C2F31800E006E2 /* CartTableViewCell.xib in Resources */,
 				AE9D56D025C1B57200E006E2 /* ProductCollectionViewCell.xib in Resources */,
 				AE9D569125C1B0D700E006E2 /* GoogleService-Info.plist in Resources */,
+				AEFF136A25EFCA5E0073608B /* InternalAlertView.xib in Resources */,
 				AE9D572F25C2F05B00E006E2 /* CartViewController.xib in Resources */,
 				AE9D564925C1AED600E006E2 /* Assets.xcassets in Resources */,
 				AE87E1FC25C74F500008D686 /* SettingsTableViewCell.xib in Resources */,
@@ -830,6 +856,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEFF137025EFD8570073608B /* InternalAlert.swift in Sources */,
 				AE87E21525C79AEC0008D686 /* DefultScreenFactoryImplementation.swift in Sources */,
 				AE33F20A25C31D9F0078FAFB /* CartAssembly.swift in Sources */,
 				AE33F1F825C2FA2A0078FAFB /* CartDataSource.swift in Sources */,
@@ -864,6 +891,7 @@
 				AE9D56A325C1B1CA00E006E2 /* Codable+Dictionary.swift in Sources */,
 				AE9D56BE25C1B3E300E006E2 /* CatalogPresenter.swift in Sources */,
 				AE87E1FB25C74F500008D686 /* SettingsTableViewCell.swift in Sources */,
+				AEFF136125EFCA300073608B /* InternalAlertView.swift in Sources */,
 				AE9D573625C2F31800E006E2 /* CartTableViewCell.swift in Sources */,
 				AE3D8E2825C5B40200BD8D4F /* CartServiceContainer.swift in Sources */,
 				AE87E14A25C66B5C0008D686 /* CartViewOutConnection.swift in Sources */,
