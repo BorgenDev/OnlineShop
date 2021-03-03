@@ -83,6 +83,7 @@
 		AEFF136125EFCA300073608B /* InternalAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFF136025EFCA300073608B /* InternalAlertView.swift */; };
 		AEFF136A25EFCA5E0073608B /* InternalAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEFF136925EFCA5E0073608B /* InternalAlertView.xib */; };
 		AEFF137025EFD8570073608B /* InternalAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFF136F25EFD8570073608B /* InternalAlert.swift */; };
+		AEFF137F25EFF0180073608B /* WrappedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFF137E25EFF0180073608B /* WrappedTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -188,6 +189,7 @@
 		AEFF136025EFCA300073608B /* InternalAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternalAlertView.swift; sourceTree = "<group>"; };
 		AEFF136925EFCA5E0073608B /* InternalAlertView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InternalAlertView.xib; sourceTree = "<group>"; };
 		AEFF136F25EFD8570073608B /* InternalAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternalAlert.swift; sourceTree = "<group>"; };
+		AEFF137E25EFF0180073608B /* WrappedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrappedTableViewCell.swift; sourceTree = "<group>"; };
 		C1A1C4106DC6CA575EF286C8 /* Pods-OnlineShop-OnlineShopUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnlineShop-OnlineShopUITests.release.xcconfig"; path = "Target Support Files/Pods-OnlineShop-OnlineShopUITests/Pods-OnlineShop-OnlineShopUITests.release.xcconfig"; sourceTree = "<group>"; };
 		DADA49929A38755D053743DB /* Pods-OnlineShopTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnlineShopTests.debug.xcconfig"; path = "Target Support Files/Pods-OnlineShopTests/Pods-OnlineShopTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E99EB8F55C70F1674827436C /* Pods-OnlineShop-OnlineShopUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnlineShop-OnlineShopUITests.debug.xcconfig"; path = "Target Support Files/Pods-OnlineShop-OnlineShopUITests/Pods-OnlineShop-OnlineShopUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -401,6 +403,7 @@
 		AE9D563E25C1AED400E006E2 /* OnlineShop */ = {
 			isa = PBXGroup;
 			children = (
+				AEFF137D25EFEFCA0073608B /* Reusing */,
 				AE87E21325C7990C0008D686 /* FactoryMethod */,
 				AE3D8E0225C5AB1D00BD8D4F /* Controller */,
 				AE3D8DEA25C59A1D00BD8D4F /* Containers */,
@@ -609,6 +612,14 @@
 				AEFF136F25EFD8570073608B /* InternalAlert.swift */,
 			);
 			path = "Custom Elements";
+			sourceTree = "<group>";
+		};
+		AEFF137D25EFEFCA0073608B /* Reusing */ = {
+			isa = PBXGroup;
+			children = (
+				AEFF137E25EFF0180073608B /* WrappedTableViewCell.swift */,
+			);
+			path = Reusing;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -889,6 +900,7 @@
 				AE9D572125C1E53500E006E2 /* RealmProduct.swift in Sources */,
 				AE87E1E325C739670008D686 /* SettingsAssembly.swift in Sources */,
 				AE9D56A325C1B1CA00E006E2 /* Codable+Dictionary.swift in Sources */,
+				AEFF137F25EFF0180073608B /* WrappedTableViewCell.swift in Sources */,
 				AE9D56BE25C1B3E300E006E2 /* CatalogPresenter.swift in Sources */,
 				AE87E1FB25C74F500008D686 /* SettingsTableViewCell.swift in Sources */,
 				AEFF136125EFCA300073608B /* InternalAlertView.swift in Sources */,
