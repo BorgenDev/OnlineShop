@@ -497,7 +497,6 @@
 		AE9D56C925C1B50E00E006E2 /* Custom views */ = {
 			isa = PBXGroup;
 			children = (
-				AEFF138325EFF45B0073608B /* Product */,
 				AEFF136E25EFD8420073608B /* Custom Elements */,
 				AEFF136525EFCA440073608B /* Internal Alert */,
 				AE9D56CA25C1B52300E006E2 /* Cells */,
@@ -585,6 +584,7 @@
 		AE9D573325C2F09900E006E2 /* TableView */ = {
 			isa = PBXGroup;
 			children = (
+				AEFF138325EFF45B0073608B /* Product */,
 				AE87E1EB25C749760008D686 /* Settings */,
 			);
 			path = TableView;
