@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CartProductView" customModule="OnlineShop" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="523" height="510"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XL1-Of-RZN">
+                    <rect key="frame" x="8" y="8" width="507" height="304"/>
+                    <color key="backgroundColor" systemColor="systemGray2Color"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="XL1-Of-RZN" secondAttribute="height" multiplier="10:6" id="rWG-va-WOo"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cheese 15" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bL8-EB-osN">
+                    <rect key="frame" x="8" y="332" width="507" height="20.5"/>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="16000 рублей" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eFy-m3-JKa">
+                    <rect key="frame" x="8" y="360.5" width="507" height="21.5"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12456" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ho-qO-DDW">
+                    <rect key="frame" x="8" y="382" width="507" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SYe-O3-L4R">
+                    <rect key="frame" x="8" y="410.5" width="507" height="91.5"/>
+                    <color key="backgroundColor" systemColor="systemGreenColor"/>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                    <state key="normal" title="Купить">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" red="1" green="0.98872813635177448" blue="0.8495414180891584" alpha="0.95729880136986301" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="0ho-qO-DDW" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="8y9-km-lst"/>
+                <constraint firstItem="XL1-Of-RZN" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="9oI-Tb-1G0"/>
+                <constraint firstAttribute="bottom" secondItem="SYe-O3-L4R" secondAttribute="bottom" constant="8" id="DdP-h6-lUK"/>
+                <constraint firstItem="eFy-m3-JKa" firstAttribute="top" secondItem="bL8-EB-osN" secondAttribute="bottom" constant="8" id="IQW-pA-vcl"/>
+                <constraint firstItem="bL8-EB-osN" firstAttribute="top" secondItem="XL1-Of-RZN" secondAttribute="bottom" constant="20" id="Is1-wk-2Vg"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="SYe-O3-L4R" secondAttribute="trailing" constant="8" id="O32-Vh-AFz"/>
+                <constraint firstAttribute="trailing" secondItem="XL1-Of-RZN" secondAttribute="trailing" constant="8" id="O6l-if-7Tl"/>
+                <constraint firstItem="eFy-m3-JKa" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="U2r-Ai-R8X"/>
+                <constraint firstItem="SYe-O3-L4R" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="WaH-Zl-1gu"/>
+                <constraint firstItem="bL8-EB-osN" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="YSh-cC-b3D"/>
+                <constraint firstItem="SYe-O3-L4R" firstAttribute="top" secondItem="0ho-qO-DDW" secondAttribute="bottom" constant="8" id="bYR-aJ-MD9"/>
+                <constraint firstItem="0ho-qO-DDW" firstAttribute="top" secondItem="eFy-m3-JKa" secondAttribute="bottom" id="d9s-J1-2m0"/>
+                <constraint firstItem="XL1-Of-RZN" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="eDI-JH-FUE"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="eFy-m3-JKa" secondAttribute="trailing" constant="8" id="elL-GH-0x4"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="bL8-EB-osN" secondAttribute="trailing" constant="8" id="hNY-yO-bnY"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="0ho-qO-DDW" secondAttribute="trailing" constant="8" id="zpC-9a-DnX"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="button" destination="SYe-O3-L4R" id="pa8-1J-OM3"/>
+                <outlet property="imageView" destination="XL1-Of-RZN" id="vA8-3i-bkd"/>
+                <outlet property="nameLabel" destination="bL8-EB-osN" id="JCg-yr-k68"/>
+                <outlet property="priceLabel" destination="eFy-m3-JKa" id="zsh-pw-8bn"/>
+                <outlet property="ratingLabel" destination="0ho-qO-DDW" id="AGA-0W-joY"/>
+            </connections>
+            <point key="canvasLocation" x="102.17391304347827" y="-380.35714285714283"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,14 +1,14 @@
 //
-//  ProductCollectionViewCell.swift
+//  CartProduct.swift
 //  OnlineShop
 //
-//  Created by Arseniy on 27.01.2021.
+//  Created by Arseniy on 03.03.2021.
 //
 
 import UIKit
 import Kingfisher
 
-class ProductCollectionViewCell: UICollectionViewCell, NibLoadable {
+class CartProductView: UIView, NibLoadable {
     
     @IBOutlet weak private var imageView: UIImageView!
     @IBOutlet weak private var nameLabel: UILabel!
@@ -24,13 +24,13 @@ class ProductCollectionViewCell: UICollectionViewCell, NibLoadable {
         imageView.layer.cornerRadius = 10
         layer.cornerRadius = 10
 
-        ratingLabel.minimumScaleFactor = 0.4
+        ratingLabel.minimumScaleFactor = 0.1
         ratingLabel.adjustsFontSizeToFitWidth = true
         
-        nameLabel.minimumScaleFactor = 0.4
+        nameLabel.minimumScaleFactor = 0.1
         nameLabel.adjustsFontSizeToFitWidth = true
         
-        priceLabel.minimumScaleFactor = 0.2
+        priceLabel.minimumScaleFactor = 0.1
         priceLabel.adjustsFontSizeToFitWidth = true
 
         addTargets()
