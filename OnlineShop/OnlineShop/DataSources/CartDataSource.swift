@@ -23,9 +23,9 @@ extension CartDataSource: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: CartTableViewCell = tableView.dequeueReusableCell(withIdentifier: CartTableViewCell.nibName, for: indexPath) as! CartTableViewCell
+        let cell = TableViewCellWrapped<ProductView>.get(from: tableView, in: indexPath)
         let product = products[indexPath.row]
-        cell.configure(by: product)
+        cell.view.configure(by: product)
         return cell
     }
     

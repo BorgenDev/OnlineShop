@@ -19,7 +19,7 @@ class CartViewController: UIViewController, CartViewInConnection {
         presenter?.viewLoaded()
         presenter?.subscribe(tableView: tableView)
         
-        tableView.register(CartTableViewCell.nib, forCellReuseIdentifier: CartTableViewCell.nibName)
+        TableViewCellWrapped<ProductView>.register(in: tableView)
         tableView.separatorInset = .init(top: 0, left: 15500, bottom: 0, right: 0)
         
         title = "Корзина"
