@@ -17,7 +17,7 @@ class CatalogViewController: UIViewController, CatalogViewInConnection {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        collectionView.register(ProductCollectionViewCell.nib, forCellWithReuseIdentifier: ProductCollectionViewCell.nibName)
+        CollectionViewCellWrapped<CartProductView>.register(in: collectionView)
         collectionView.contentInset.top = 16
         
         presenter?.viewLoaded()
