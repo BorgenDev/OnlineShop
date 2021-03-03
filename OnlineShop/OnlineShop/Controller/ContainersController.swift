@@ -20,7 +20,6 @@ class ContainerController {
             ProductsServiceContainer(mainContainer: mainContainer),
             CartServiceContainer(mainContainer: mainContainer),
             CartContainer(mainContainer: mainContainer),
-            NewProductContainer(mainContainer: mainContainer),
             CatalogContainer(mainContainer: mainContainer),
             DatabaseServiceContainer(mainContainer: mainContainer),
             SettingsContainer(mainContainer: mainContainer),

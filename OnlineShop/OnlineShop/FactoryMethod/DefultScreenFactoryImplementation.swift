@@ -12,7 +12,6 @@ enum Screens: String {
     case cart
     case catalog
     case settings
-    case newProduct
 }
 
 class DefultScreenFactoryImplementation: DefultScreenFactory {
@@ -29,7 +28,6 @@ class DefultScreenFactoryImplementation: DefultScreenFactory {
         case .cart          : return setupeCartScreen()
         case .catalog       : return setupeCatalogScreen()
         case .settings      : return setupeSettinsScreen()
-        case .newProduct    : return setupeNewProductScreen()
             
         }
         
@@ -77,17 +75,4 @@ class DefultScreenFactoryImplementation: DefultScreenFactory {
         
     }
     
-    private func setupeNewProductScreen() -> UINavigationController {
-        let newProductAssembly = NewProductAssembly(container: mainContainer.rootContainer)
-        
-        guard let newProductViewController = newProductAssembly.assembly() else {
-            return UINavigationController()
-        }
-        
-        let newProductNC = UINavigationController(rootViewController: newProductViewController)
-        newProductNC.tabBarItem = UITabBarItem(title: "Добавить", image: UIImage(systemName: "plus.circle"), tag: 3)
-        
-        return newProductNC
-        
-    }
 }

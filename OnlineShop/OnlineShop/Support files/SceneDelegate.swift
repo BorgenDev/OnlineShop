@@ -30,9 +30,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let cartScreen = factory?.setupeScreen(screen: .cart)
         let catalogScreen = factory?.setupeScreen(screen: .catalog)
         let settingsScreen = factory?.setupeScreen(screen: .settings)
-        let newProductScreen = factory?.setupeScreen(screen: .newProduct)
         
-        let screenArray: [UINavigationController?] = [catalogScreen, cartScreen, settingsScreen, newProductScreen]
+        let screenArray: [UINavigationController?] = [catalogScreen, cartScreen, settingsScreen]
         let veriflyArray = screenArray.compactMap{ $0 }
     
         let tabBarController = setupeTabBarController(cartScreen: cartScreen, cartService: cartService, settingsService: settingsService, controllersArray: veriflyArray)
