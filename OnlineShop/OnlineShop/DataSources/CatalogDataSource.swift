@@ -25,13 +25,13 @@ class CatalogDataSource: NSObject {
 
 extension CatalogDataSource: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell: ProductCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: ProductCollectionViewCell.nibName, for: indexPath) as! ProductCollectionViewCell
+        let cell = CollectionViewCellWrapped<CartProductView>.get(from: collectionView, in: indexPath)
         let product = products[indexPath.row]
         buttonShouldBeHideFromScreen = { indicator in
             self.buttonShouldBeHide = indicator
         }
-        cell.configure(by: product, isButtonHidden: buttonShouldBeHide)
-        cell.buttonClocked = { [weak self] in
+        cell.view.configure(by: product, isButtonHidden: buttonShouldBeHide)
+        cell.view.buttonClocked = { [weak self] in
             self?.productShouldBeAddedToCart?(product)
         }
         
@@ -46,7 +46,7 @@ extension CatalogDataSource: UICollectionViewDataSource {
 extension CatalogDataSource: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let mainWidth = collectionView.frame.width
-        let calculator = CatalogLayoutCalculator(spacing: spacing, numberOfColumns: numberOfColumns, aspectRatio: 2/3)
+        let calculator = CatalogLayoutCalculator(spacing: spacing, numberOfColumns: numberOfColumns, aspectRatio: 3/2)
         return calculator.calculateSize(for: mainWidth)
     }
 
