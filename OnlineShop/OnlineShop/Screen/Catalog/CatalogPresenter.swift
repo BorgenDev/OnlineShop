@@ -30,6 +30,10 @@ class CatalogPresenter: CatalogViewOutConnection, CatalogPresenterInConnection {
     func viewLoaded() {
         interactor?.fetchProducts()
     }
+    
+    func reloadCatalog() {
+        view?.reloadView()
+    }
 
     func subscribe(collectionView: UICollectionView) {
         collectionView.dataSource = dataSource

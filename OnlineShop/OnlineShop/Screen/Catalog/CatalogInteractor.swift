@@ -8,6 +8,8 @@
 import Foundation
 
 class CatalogInteractor: CatalogPresenterOutConnection {
+
+    
     weak var presenter: CatalogPresenterInConnection?
     private let productService: ProductService?
     private var cartService: CartService?
@@ -32,6 +34,7 @@ class CatalogInteractor: CatalogPresenterOutConnection {
     func addButtonShouldBeHide() {
         settingsService?.hideAddButton = { indictator in
             self.presenter?.statusOfAddButtonDidChange(indicator: indictator)
+            self.presenter?.reloadCatalog()
         }
     }
 }
